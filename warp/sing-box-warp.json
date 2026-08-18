@@ -1,7 +1,6 @@
 {
   "log": {
-    "disabled": true,
-    "timestamp": true
+    "disabled": true
   },
   "dns": {
     "servers": [
@@ -10,47 +9,9 @@
         "server": "8.8.8.8",
         "detour": "💦 Warp - بهترین پینگ 🚀",
         "tag": "dns-remote"
-      },
-      {
-        "type": "udp",
-        "server": "8.8.8.8",
-        "tag": "dns-direct"
       }
     ],
-    "rules": [
-      {
-        "clash_mode": "Direct",
-        "server": "dns-direct"
-      },
-      {
-        "clash_mode": "Global",
-        "server": "dns-remote"
-      },
-      {
-        "rule_set": [
-          "geosite-category-ads-all"
-        ],
-        "action": "reject"
-      },
-      {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": [
-              "geosite-ir"
-            ]
-          },
-          {
-            "rule_set": "geoip-ir"
-          }
-        ],
-        "action": "route",
-        "server": "dns-direct"
-      }
-    ],
-    "strategy": "ipv4_only",
-    "independent_cache": true
+    "strategy": "ipv4_only"
   },
   "inbounds": [
     {
@@ -61,108 +22,17 @@
       ],
       "mtu": 9000,
       "auto_route": true,
-      "strict_route": true,
       "stack": "mixed"
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "127.0.0.1",
-      "listen_port": 2080
     }
   ],
   "route": {
     "rules": [
       {
-        "ip_cidr": "172.19.0.2",
-        "action": "hijack-dns"
-      },
-      {
-        "clash_mode": "Direct",
-        "outbound": "direct"
-      },
-      {
-        "clash_mode": "Global",
-        "outbound": "✅ انتخاب دستی"
-      },
-      {
-        "action": "sniff"
-      },
-      {
-        "protocol": "dns",
-        "action": "hijack-dns"
-      },
-      {
         "ip_is_private": true,
         "outbound": "direct"
-      },
-      {
-        "rule_set": [
-          "geosite-category-ads-all"
-        ],
-        "action": "reject"
-      },
-      {
-        "rule_set": [
-          "geosite-ir"
-        ],
-        "action": "route",
-        "outbound": "direct"
-      },
-      {
-        "rule_set": [
-          "geoip-ir"
-        ],
-        "action": "route",
-        "outbound": "direct"
       }
     ],
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-category-ads-all",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
-        "download_detour": "direct"
-      }
-    ],
-    "auto_detect_interface": true,
     "final": "✅ انتخاب دستی"
-  },
-  "ntp": {
-    "enabled": true,
-    "server": "time.cloudflare.com",
-    "server_port": 123,
-    "domain_resolver": "dns-direct",
-    "interval": "30m",
-    "write_to_system": false
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "store_fakeip": true
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "ui",
-      "default_mode": "Rule",
-      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "direct"
-    }
   },
   "endpoints": [
     {
@@ -198,33 +68,6 @@
       "type": "wireguard",
       "address": [
         "172.16.0.2/32",
-        "2606:4700:110:8e8d:5528:49c7:aa56:99ac/128"
-      ],
-      "mtu": 1280,
-      "peers": [
-        {
-          "address": "188.114.97.224",
-          "port": 939,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            0,
-            0,
-            0
-          ],
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
-          "persistent_keepalive_interval": 25
-        }
-      ],
-      "private_key": "CNaQRLKiOLw0LZy4tEJKwip7CZtwZtsNJ+JttTgADVA="
-    },
-    {
-      "tag": "💦 2. Warp 🇮🇷",
-      "type": "wireguard",
-      "address": [
-        "172.16.0.2/32",
         "2606:4700:110:85b7:30a6:3a44:2326:3d9e/128"
       ],
       "mtu": 1280,
@@ -248,35 +91,7 @@
       "private_key": "iOwG7aC6FZbHEotrpwealnBGAWZfSUs1MjlL0MDJ8n8="
     },
     {
-      "tag": "💦 2. WoW 🌍",
-      "detour": "💦 2. Warp 🇮🇷",
-      "type": "wireguard",
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:85b7:30a6:3a44:2326:3d9e/128"
-      ],
-      "mtu": 1280,
-      "peers": [
-        {
-          "address": "162.159.192.247",
-          "port": 2408,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            0,
-            36,
-            180
-          ],
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
-          "persistent_keepalive_interval": 25
-        }
-      ],
-      "private_key": "iOwG7aC6FZbHEotrpwealnBGAWZfSUs1MjlL0MDJ8n8="
-    },
-    {
-      "tag": "💦 3. Warp 🇮🇷",
+      "tag": "💦 1. Warp 🇮🇷",
       "type": "wireguard",
       "address": [
         "172.16.0.2/32",
@@ -303,35 +118,8 @@
       "private_key": "eNhlxMRq/q1iVbFl2txHjFGYlsa4g0D/MXPAHiT0Z1E="
     },
     {
-      "tag": "💦 3. WoW 🌍",
-      "detour": "💦 3. Warp 🇮🇷",
-      "type": "wireguard",
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8ed8:c511:f1e1:9366:e12d/128"
-      ],
-      "mtu": 1280,
-      "peers": [
-        {
-          "address": "8.47.69.150",
-          "port": 945,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            163,
-            48,
-            151
-          ],
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
-          "persistent_keepalive_interval": 25
-        }
-      ],
-      "private_key": "eNhlxMRq/q1iVbFl2txHjFGYlsa4g0D/MXPAHiT0Z1E="
-    },
-    {
-      "tag": "💦 4. Warp 🇮🇷",
+      "tag": "💦 1. WoW 🌍",
+      "detour": "💦 1. Warp 🇮🇷",
       "type": "wireguard",
       "address": [
         "172.16.0.2/32",
@@ -358,35 +146,7 @@
       "private_key": "WPVv2L+nPBan9qSnAn+ex7fLtBQIb2ntzHQyH8M5SEk="
     },
     {
-      "tag": "💦 4. WoW 🌍",
-      "detour": "💦 4. Warp 🇮🇷",
-      "type": "wireguard",
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8d3d:1291:c233:3a28:f6bf/128"
-      ],
-      "mtu": 1280,
-      "peers": [
-        {
-          "address": "162.159.192.252",
-          "port": 988,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            215,
-            211,
-            230
-          ],
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
-          "persistent_keepalive_interval": 25
-        }
-      ],
-      "private_key": "WPVv2L+nPBan9qSnAn+ex7fLtBQIb2ntzHQyH8M5SEk="
-    },
-    {
-      "tag": "💦 5. Warp 🇮🇷",
+      "tag": "💦 1. Warp 🇮🇷",
       "type": "wireguard",
       "address": [
         "172.16.0.2/32",
@@ -413,63 +173,8 @@
       "private_key": "0IldgbkgTPquoLKI13Te80/kuEMn3+VEsCU6OfcfQns="
     },
     {
-      "tag": "💦 5. WoW 🌍",
-      "detour": "💦 5. Warp 🇮🇷",
-      "type": "wireguard",
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8a86:e7fe:c8f0:c7aa:b2b1/128"
-      ],
-      "mtu": 1280,
-      "peers": [
-        {
-          "address": "8.6.112.26",
-          "port": 987,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            6,
-            223,
-            6
-          ],
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
-          "persistent_keepalive_interval": 25
-        }
-      ],
-      "private_key": "0IldgbkgTPquoLKI13Te80/kuEMn3+VEsCU6OfcfQns="
-    },
-    {
-      "tag": "💦 6. Warp 🇮🇷",
-      "type": "wireguard",
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:82d8:ac7b:1994:3a00:9ff2/128"
-      ],
-      "mtu": 1280,
-      "peers": [
-        {
-          "address": "8.47.69.240",
-          "port": 988,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            68,
-            200,
-            234
-          ],
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
-          "persistent_keepalive_interval": 25
-        }
-      ],
-      "private_key": "CDPrrn7H6DbLwOIUTwqemCzDzmVGEEl10Gech7SEfHg="
-    },
-    {
-      "tag": "💦 6. WoW 🌍",
-      "detour": "💦 6. Warp 🇮🇷",
+      "tag": "💦 1. WoW 🌍",
+      "detour": "💦 1. Warp 🇮🇷",
       "type": "wireguard",
       "address": [
         "172.16.0.2/32",
@@ -504,38 +209,22 @@
         "💦 Warp - بهترین پینگ 🚀",
         "💦 WoW - بهترین پینگ 🚀",
         "💦 1. Warp 🇮🇷",
-        "💦 2. Warp 🇮🇷",
-        "💦 3. Warp 🇮🇷",
-        "💦 4. Warp 🇮🇷",
-        "💦 5. Warp 🇮🇷",
-        "💦 6. Warp 🇮🇷",
+        "💦 1. Warp 🇮🇷",
+        "💦 1. Warp 🇮🇷",
         "💦 1. WoW 🌍",
-        "💦 2. WoW 🌍",
-        "💦 3. WoW 🌍",
-        "💦 4. WoW 🌍",
-        "💦 5. WoW 🌍",
-        "💦 6. WoW 🌍"
-      ],
-      "interrupt_exist_connections": false
-    },
-    {
-      "type": "direct",
-      "tag": "direct",
-      "domain_resolver": "dns-direct"
+        "💦 1. WoW 🌍",
+        "💦 1. WoW 🌍"
+      ]
     },
     {
       "type": "urltest",
       "tag": "💦 Warp - بهترین پینگ 🚀",
       "outbounds": [
         "💦 1. Warp 🇮🇷",
-        "💦 2. Warp 🇮🇷",
-        "💦 3. Warp 🇮🇷",
-        "💦 4. Warp 🇮🇷",
-        "💦 5. Warp 🇮🇷",
-        "💦 6. Warp 🇮🇷"
+        "💦 1. Warp 🇮🇷",
+        "💦 1. Warp 🇮🇷"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interrupt_exist_connections": false,
       "interval": "30s"
     },
     {
@@ -543,15 +232,16 @@
       "tag": "💦 WoW - بهترین پینگ 🚀",
       "outbounds": [
         "💦 1. WoW 🌍",
-        "💦 2. WoW 🌍",
-        "💦 3. WoW 🌍",
-        "💦 4. WoW 🌍",
-        "💦 5. WoW 🌍",
-        "💦 6. WoW 🌍"
+        "💦 1. WoW 🌍",
+        "💦 1. WoW 🌍"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interrupt_exist_connections": false,
       "interval": "30s"
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "domain_resolver": "dns-direct"
     }
   ]
 }
