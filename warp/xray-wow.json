@@ -1098,5 +1098,280 @@
       }
     },
     "stats": {}
+  },
+  {
+    "remarks": "زن زندگی آزادی",
+    "version": {
+      "min": "26.2.6"
+    },
+    "log": {
+      "loglevel": "none"
+    },
+    "dns": {
+      "hosts": {
+        "geosite:category-ads-all": "#3",
+        "geosite:category-ads-ir": "#3"
+      },
+      "servers": [
+        {
+          "address": "8.8.8.8",
+          "tag": "remote-dns"
+        },
+        {
+          "address": "8.8.8.8",
+          "domains": [
+            "geosite:category-ir"
+          ],
+          "expectIPs": [
+            "geoip:ir"
+          ],
+          "skipFallback": true
+        }
+      ],
+      "queryStrategy": "UseIPv4",
+      "tag": "dns"
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "enabled": true,
+          "routeOnly": true
+        },
+        "tag": "mixed-in"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10853,
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "8.8.8.8",
+          "network": "tcp,udp",
+          "port": 53
+        },
+        "tag": "dns-in"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "wireguard",
+        "settings": {
+          "address": [
+            "172.16.0.2/32",
+            "2606:4700:110:8dda:ece8:c423:198c:241e/128"
+          ],
+          "mtu": 1280,
+          "peers": [
+            {
+              "endpoint": "8.47.69.246:1070",
+              "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+              "keepAlive": 25
+            }
+          ],
+          "reserved": [
+            215,
+            213,
+            20
+          ],
+          "secretKey": "UJZ67CG9cUObfulthUlDwDbPlDuW7kqVZZD4+T6IEFk="
+        },
+        "streamSettings": {
+          "sockopt": {
+            "dialerProxy": "proxy"
+          }
+        },
+        "tag": "chain"
+      },
+      {
+        "protocol": "wireguard",
+        "settings": {
+          "address": [
+            "172.16.0.2/32",
+            "2606:4700:110:880e:d409:4131:68ed:d7ac/128"
+          ],
+          "mtu": 1280,
+          "peers": [
+            {
+              "endpoint": "162.159.192.236:988",
+              "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+              "keepAlive": 25
+            }
+          ],
+          "reserved": [
+            31,
+            21,
+            15
+          ],
+          "secretKey": "KCP5Id5So06pDvD4eMRVMbzeFWvu2hk/4nlAE4GvqFM="
+        },
+        "streamSettings": {
+          "finalmask": {
+            "udp": [
+              {
+                "type": "noise",
+                "settings": {
+                  "reset": "2-5",
+                  "noise": [
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "dns",
+        "settings": {
+          "rules": [
+            {
+              "action": "hijack"
+            }
+          ]
+        },
+        "tag": "dns-out"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "inboundTag": [
+            "mixed-in"
+          ],
+          "port": 53,
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns-in"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "remote-dns"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "geosite:private"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "geosite:category-ads-all",
+            "geosite:category-ads-ir"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "geosite:category-ir"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "geoip:ir"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "network": "tcp,udp",
+          "outboundTag": "chain",
+          "type": "field"
+        }
+      ]
+    },
+    "policy": {
+      "levels": {
+        "0": {
+          "connIdle": 300,
+          "handshake": 4,
+          "uplinkOnly": 1,
+          "downlinkOnly": 1
+        }
+      },
+      "system": {
+        "statsOutboundUplink": true,
+        "statsOutboundDownlink": true
+      }
+    },
+    "stats": {}
   }
 ]
