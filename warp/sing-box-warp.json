@@ -94,6 +94,61 @@
         }
       ],
       "private_key": "iBHB5brA2I3Y2Uavk3VQLoLKQWqIZHf4AEzF1jYM62o="
+    },
+    {
+      "tag": "زن زندگی آزادی 2 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8bf6:1b15:cbde:eebb:cf0c/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.220",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            252,
+            10,
+            175
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "iBHB5brA2I3Y2Uavk3VQLoLKQWqIZHf4AEzF1jYM62o="
+    },
+    {
+      "tag": "زن زندگی آزادی 2 🌍",
+      "detour": "زن زندگی آزادی 2 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b74:a6a2:5539:9d5c:47a4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.132",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            38,
+            96,
+            8
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KNYMpd19Je8s2tdMKsPX3H2R1AcbIo7wZaM0jzQ2THU="
     }
   ],
   "outbounds": [
@@ -104,14 +159,17 @@
         "بهترین پینگ🇮🇷",
         "بهترین پینگ 🌍",
         "زن زندگی آزادی 1 🇮🇷",
-        "زن زندگی آزادی 1 🌍"
+        "زن زندگی آزادی 2 🇮🇷",
+        "زن زندگی آزادی 1 🌍",
+        "زن زندگی آزادی 2 🌍"
       ]
     },
     {
       "type": "urltest",
       "tag": "بهترین پینگ🇮🇷",
       "outbounds": [
-        "زن زندگی آزادی 1 🇮🇷"
+        "زن زندگی آزادی 1 🇮🇷",
+        "زن زندگی آزادی 2 🇮🇷"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s"
@@ -120,7 +178,8 @@
       "type": "urltest",
       "tag": "بهترین پینگ 🌍",
       "outbounds": [
-        "زن زندگی آزادی 1 🌍"
+        "زن زندگی آزادی 1 🌍",
+        "زن زندگی آزادی 2 🌍"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s"
