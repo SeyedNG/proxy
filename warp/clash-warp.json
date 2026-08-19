@@ -52,12 +52,12 @@
       "udp": true,
       "mtu": 1280,
       "amnezia-wg-option": {
-        "jc": 5,
-        "jmin": 62,
-        "jmax": 138,
+        "jc": 4,
+        "jmin": 53,
+        "jmax": 89,
         "H1": 2,
-        "H2": 1,
-        "H3": 4,
+        "H2": 3,
+        "H3": 6,
         "H4": 5
       }
     },
@@ -83,6 +83,60 @@
       "udp": true,
       "mtu": 1280,
       "dialer-proxy": "زن زندگی آزادی 1 🇮🇷"
+    },
+    {
+      "name": "زن زندگی آزادی 2 🇮🇷",
+      "type": "wireguard",
+      "ip": "172.16.0.2/32",
+      "ipv6": "2606:4700:110:8bf6:1b15:cbde:eebb:cf0c/128",
+      "ip-version": "ipv4",
+      "private-key": "iBHB5brA2I3Y2Uavk3VQLoLKQWqIZHf4AEzF1jYM62o=",
+      "server": "8.6.112.220",
+      "port": 891,
+      "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "allowed-ips": [
+        "0.0.0.0/0",
+        "::/0"
+      ],
+      "reserved": [
+        252,
+        10,
+        175
+      ],
+      "udp": true,
+      "mtu": 1280,
+      "amnezia-wg-option": {
+        "jc": 4,
+        "jmin": 66,
+        "jmax": 108,
+        "H1": 2,
+        "H2": 5,
+        "H3": 1,
+        "H4": 6
+      }
+    },
+    {
+      "name": "زن زندگی آزادی 2 🌍",
+      "type": "wireguard",
+      "ip": "172.16.0.2/32",
+      "ipv6": "2606:4700:110:8b74:a6a2:5539:9d5c:47a4/128",
+      "ip-version": "ipv4",
+      "private-key": "KNYMpd19Je8s2tdMKsPX3H2R1AcbIo7wZaM0jzQ2THU=",
+      "server": "8.6.112.132",
+      "port": 4500,
+      "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "allowed-ips": [
+        "0.0.0.0/0",
+        "::/0"
+      ],
+      "reserved": [
+        38,
+        96,
+        8
+      ],
+      "udp": true,
+      "mtu": 1280,
+      "dialer-proxy": "زن زندگی آزادی 2 🇮🇷"
     }
   ],
   "proxy-groups": [
@@ -93,14 +147,17 @@
         "بهترین پینگ🇮🇷",
         "بهترین پینگ 🌍",
         "زن زندگی آزادی 1 🇮🇷",
-        "زن زندگی آزادی 1 🌍"
+        "زن زندگی آزادی 2 🇮🇷",
+        "زن زندگی آزادی 1 🌍",
+        "زن زندگی آزادی 2 🌍"
       ]
     },
     {
       "name": "بهترین پینگ🇮🇷",
       "type": "url-test",
       "proxies": [
-        "زن زندگی آزادی 1 🇮🇷"
+        "زن زندگی آزادی 1 🇮🇷",
+        "زن زندگی آزادی 2 🇮🇷"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": 30,
@@ -110,7 +167,8 @@
       "name": "بهترین پینگ 🌍",
       "type": "url-test",
       "proxies": [
-        "زن زندگی آزادی 1 🌍"
+        "زن زندگی آزادی 1 🌍",
+        "زن زندگی آزادی 2 🌍"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": 30,
