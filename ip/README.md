@@ -315,11 +315,11 @@
 
 4. در صورت قطع یا تغییر مسیر، آی‌پی بعدی را امتحان کنید.
 
+### 📖 [راهنمای تغییر ریجن ورکر کلودفلر](https://t.me/SeyedNG/448)
+
 ---
 
 <div align="center">
-
-[![راهنمای تغییر ریجن ورکر کلودفلر](https://img.shields.io/badge/راهنمای%20تغییر%20ریجن%20ورکر%20کلودفلر-2ea44f?style=for-the-badge)](https://t.me/SeyedNG/448)
 
 [![کانال تلگرام SeyedNG](https://img.shields.io/badge/Telegram-@SeyedNG-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/SeyedNG)
 
