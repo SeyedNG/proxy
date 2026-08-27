@@ -305,20 +305,17 @@
 
 1. یکی از آی‌پی‌ها را انتخاب کنید.
 2. جای آدرس ورکر کلودفلر یا بخش **Clean IP** پنل **BPB** قرار دهید.
-3. لوکیشن IP خروجی را بررسی کنید:
-
-   <p align="center">
-     <a href="https://browserleaks.com/ip">
-       <img src="https://img.shields.io/badge/🔍_بررسی_IP-BrowserLeaks-2ea44f?style=for-the-badge" alt="Check IP on BrowserLeaks">
-     </a>
-   </p>
-
+3. لوکیشن IP خروجی را بررسی کنید (دکمهٔ زیر).
 4. در صورت قطع یا تغییر مسیر، آی‌پی بعدی را امتحان کنید.
 
 ---
 
-<p align="center">
-  <a href="https://t.me/SeyedNG">
-    <img src="https://img.shields.io/badge/عضویت_در_کانال_تلگرام-SeyedNG-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Channel">
-  </a>
-</p>
+<div align="center">
+
+[![بررسی IP با BrowserLeaks](https://img.shields.io/badge/🔍%20بررسی%20IP-BrowserLeaks-1a1a2e?style=for-the-badge&labelColor=16213e)](https://browserleaks.com/ip)
+
+[![راهنمای تغییر ریجن ورکر کلودفلر](https://img.shields.io/badge/📖%20راهنما-تغییر%20ریجن%20ورکر%20کلودفلر-1a1a2e?style=for-the-badge&labelColor=16213e)](https://t.me/SeyedNG/448)
+
+[![کانال تلگرام SeyedNG](https://img.shields.io/badge/Telegram-@SeyedNG-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/SeyedNG)
+
+</div>
