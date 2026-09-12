@@ -60,6 +60,53 @@
       "settings": {
         "servers": [
           {
+            "address": "51.79.85.185",
+            "port": 8118,
+            "method": "aes-256-gcm",
+            "password": "cdBIDV42DCwnfIN",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "169.40.42.16",
+            "port": 443,
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "yahoo.com",
+          "allowInsecure": false,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "proxy-3",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
             "address": "15.235.75.71",
             "port": 8388,
             "method": "chacha20-ietf-poly1305",
@@ -73,7 +120,7 @@
       }
     },
     {
-      "tag": "proxy-2",
+      "tag": "proxy-4",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -102,70 +149,12 @@
       }
     },
     {
-      "tag": "proxy-3",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "169.40.42.202",
-            "port": 443,
-            "users": [
-              {
-                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "yahoo.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-4",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "169.40.42.173",
-            "port": 443,
-            "users": [
-              {
-                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "yahoo.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "proxy-5",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "169.40.42.16",
+            "address": "169.40.42.225",
             "port": 443,
             "users": [
               {
@@ -184,7 +173,7 @@
         "tlsSettings": {
           "serverName": "yahoo.com",
           "allowInsecure": false,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -252,7 +241,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "169.40.42.225",
+            "address": "169.40.42.202",
             "port": 443,
             "users": [
               {
@@ -277,42 +266,35 @@
     },
     {
       "tag": "proxy-9",
-      "protocol": "shadowsocks",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "51.195.126.38",
-            "port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "2YdE4lFOid5a",
-            "level": 8
+            "address": "169.40.42.173",
+            "port": 443,
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "yahoo.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "tag": "proxy-10",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "51.79.85.185",
-            "port": 8118,
-            "method": "aes-256-gcm",
-            "password": "cdBIDV42DCwnfIN",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      }
-    },
-    {
-      "tag": "proxy-11",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -341,16 +323,34 @@
       }
     },
     {
+      "tag": "proxy-11",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "51.195.126.38",
+            "port": 8388,
+            "method": "chacha20-ietf-poly1305",
+            "password": "2YdE4lFOid5a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      }
+    },
+    {
       "tag": "proxy-12",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "186.246.19.79",
-            "port": 40443,
+            "address": "153.75.89.137",
+            "port": 443,
             "users": [
               {
-                "id": "5e3f974b-06fc-4555-907a-6681391b7c17",
+                "id": "77da6e30-ad4e-11f1-94d5-525400d1d4f7",
                 "flow": "xtls-rprx-vision",
                 "encryption": "none",
                 "level": 8
@@ -363,159 +363,14 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "deepl.com",
+          "serverName": "tradingview.com",
           "allowInsecure": false,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
     {
       "tag": "proxy-13",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "45.152.64.9",
-            "port": 11763,
-            "users": [
-              {
-                "id": "fe564b09-1fd8-4053-934b-3106350e4272",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.amazon.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-14",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "45.144.137.129",
-            "port": 41923,
-            "users": [
-              {
-                "id": "b28936a7-c11a-4147-8806-b66efd1658a8",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "dash.cloudflare.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-15",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "150.251.113.34",
-            "port": 443,
-            "users": [
-              {
-                "id": "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.cloudflare.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-16",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "vj37-1936vtw.fincore.top",
-            "port": 443,
-            "users": [
-              {
-                "id": "5e8e81ac-a1c4-4543-b81e-651bf9872b54",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.bing.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-17",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "82.39.171.12",
-            "port": 443,
-            "users": [
-              {
-                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "yahoo.com",
-          "allowInsecure": false,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "proxy-18",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -544,7 +399,7 @@
       }
     },
     {
-      "tag": "proxy-19",
+      "tag": "proxy-14",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -562,17 +417,46 @@
       }
     },
     {
-      "tag": "proxy-20",
+      "tag": "proxy-15",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "77.73.232.61",
-            "port": 19747,
+            "address": "186.246.19.79",
+            "port": 40443,
             "users": [
               {
-                "id": "2a9ed01e-5455-44b4-a66a-76ee8165f0ac",
-                "flow": "",
+                "id": "5e3f974b-06fc-4555-907a-6681391b7c17",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "deepl.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "proxy-16",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "82.39.171.12",
+            "port": 443,
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
                 "encryption": "none",
                 "level": 8
               }
@@ -585,6 +469,122 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "yahoo.com",
+          "allowInsecure": false,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "proxy-17",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "45.144.137.129",
+            "port": 41923,
+            "users": [
+              {
+                "id": "b28936a7-c11a-4147-8806-b66efd1658a8",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "dash.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "proxy-18",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vj37-1936vtw.fincore.top",
+            "port": 443,
+            "users": [
+              {
+                "id": "5e8e81ac-a1c4-4543-b81e-651bf9872b54",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.bing.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "proxy-19",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "45.152.64.9",
+            "port": 11763,
+            "users": [
+              {
+                "id": "fe564b09-1fd8-4053-934b-3106350e4272",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.amazon.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "proxy-20",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "150.251.113.34",
+            "port": 443,
+            "users": [
+              {
+                "id": "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
           "allowInsecure": false,
           "fingerprint": "chrome"
         }
@@ -592,64 +592,6 @@
     },
     {
       "tag": "proxy-21",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "77.91.68.70",
-            "port": 55983,
-            "users": [
-              {
-                "id": "f667a096-5231-4cfb-8759-92bb32473139",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "yahoo.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-22",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "109.248.170.119",
-            "port": 13447,
-            "users": [
-              {
-                "id": "b573cefb-7bc7-4a42-b407-b8b534e66773",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "yahoo.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-23",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -678,17 +620,17 @@
       }
     },
     {
-      "tag": "proxy-24",
+      "tag": "proxy-22",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "153.75.89.137",
-            "port": 443,
+            "address": "77.73.232.61",
+            "port": 19747,
             "users": [
               {
-                "id": "77da6e30-ad4e-11f1-94d5-525400d1d4f7",
-                "flow": "xtls-rprx-vision",
+                "id": "2a9ed01e-5455-44b4-a66a-76ee8165f0ac",
+                "flow": "",
                 "encryption": "none",
                 "level": 8
               }
@@ -700,9 +642,67 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "tradingview.com",
+          "serverName": "yahoo.com",
           "allowInsecure": false,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "proxy-23",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "109.248.170.119",
+            "port": 13447,
+            "users": [
+              {
+                "id": "b573cefb-7bc7-4a42-b407-b8b534e66773",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "yahoo.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "proxy-24",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "77.91.68.70",
+            "port": 55983,
+            "users": [
+              {
+                "id": "f667a096-5231-4cfb-8759-92bb32473139",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "yahoo.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
         }
       }
     },
