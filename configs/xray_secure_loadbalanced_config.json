@@ -60,30 +60,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "82.198.246.233",
-            "port": 180,
-            "users": [
-              {
-                "id": "d13fc2f5-3e05-4795-81eb-44143a09e552",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
             "address": "134.195.196.211",
             "port": 18000,
             "users": [
@@ -103,7 +79,7 @@
       }
     },
     {
-      "tag": "proxy-3",
+      "tag": "proxy-2",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -127,7 +103,7 @@
       }
     },
     {
-      "tag": "proxy-4",
+      "tag": "proxy-3",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -151,38 +127,35 @@
       }
     },
     {
-      "tag": "proxy-5",
-      "protocol": "trojan",
+      "tag": "proxy-4",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "45.205.0.6",
+            "address": "ch.cache-4d8a.com",
             "port": 443,
-            "password": "humanity",
-            "level": 8
+            "users": [
+              {
+                "id": "ddf09ad0-02dc-485b-9048-1038de5bebf0",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/assignment",
-          "headers": {
-            "Host": "www.calmlunch.com"
-          }
-        },
         "tlsSettings": {
-          "serverName": "www.calmlunch.com",
-          "allowInsecure": false,
-          "alpn": [
-            "http/1.1"
-          ]
+          "serverName": "ch.cache-4d8a.com",
+          "allowInsecure": false
         }
       }
     },
     {
-      "tag": "proxy-6",
+      "tag": "proxy-5",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -212,7 +185,7 @@
       }
     },
     {
-      "tag": "proxy-7",
+      "tag": "proxy-6",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -238,6 +211,39 @@
           "headers": {
             "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
           }
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "195.58.144.56",
+            "port": 11907,
+            "users": [
+              {
+                "id": "07cb07b9-0c4d-46c1-a15a-b147511b6b07",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "195.58.144.56",
+          "allowInsecure": false,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome"
         }
       }
     },

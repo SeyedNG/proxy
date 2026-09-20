@@ -15,16 +15,7 @@ dns:
   - https://dns.google/dns-query
   - https://cloudflare-dns.com/dns-query
 proxies:
-- name: ۱ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 82.198.246.233
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۲ - زن زندگی آزادی 🇨🇦
+- name: ۴ - زن زندگی آزادی 🇨🇦
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -33,7 +24,7 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: ۶ - زن زندگی آزادی 🇺🇸
+- name: ۵ - زن زندگی آزادی 🇺🇸
   type: vmess
   server: 31.77.8.97
   port: 110
@@ -51,23 +42,19 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: ۸ - زن زندگی آزادی 🇺🇸
-  type: trojan
-  server: 45.205.0.6
+- name: ۱۳ - زن زندگی آزادی 🇨🇭
+  type: vless
+  server: ch.cache-4d8a.com
   port: 443
-  password: humanity
+  uuid: ddf09ad0-02dc-485b-9048-1038de5bebf0
   udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: ۱۱ - زن زندگی آزادی 🇨🇦
+  tls: true
+  flow: xtls-rprx-vision
+  servername: ch.cache-4d8a.com
+  reality-opts:
+    public-key: lYVz8iVZI2XjTCw_XS9wi08P1DLXO0c7jQo-_xyw2xY
+    short-id: 9d84de9d9f7b85e9
+- name: ۲۰ - زن زندگی آزادی 🇨🇦
   type: vmess
   server: 188.114.96.19
   port: 80
@@ -81,7 +68,7 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: ۱۲ - زن زندگی آزادی 🇨🇦
+- name: ۲۳ - زن زندگی آزادی 🇨🇦
   type: vmess
   server: 188.114.96.19
   port: 80
@@ -95,29 +82,42 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: ۲۷ - زن زندگی آزادی 🇭🇰
+  type: vless
+  server: 195.58.144.56
+  port: 11907
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  udp: true
+  tls: true
+  servername: 195.58.144.56
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
 proxy-groups:
 - name: زن زندگی آزادی
   type: select
   proxies:
   - بهترین پینگ
-  - ۱ - زن زندگی آزادی 🇺🇸
-  - ۲ - زن زندگی آزادی 🇨🇦
-  - ۶ - زن زندگی آزادی 🇺🇸
+  - ۴ - زن زندگی آزادی 🇨🇦
+  - ۵ - زن زندگی آزادی 🇺🇸
   - ۷ - زن زندگی آزادی 🇸🇬
-  - ۸ - زن زندگی آزادی 🇺🇸
-  - ۱۱ - زن زندگی آزادی 🇨🇦
-  - ۱۲ - زن زندگی آزادی 🇨🇦
+  - ۱۳ - زن زندگی آزادی 🇨🇭
+  - ۲۰ - زن زندگی آزادی 🇨🇦
+  - ۲۳ - زن زندگی آزادی 🇨🇦
+  - ۲۷ - زن زندگی آزادی 🇭🇰
   - DIRECT
 - name: بهترین پینگ
   type: url-test
   proxies:
-  - ۱ - زن زندگی آزادی 🇺🇸
-  - ۲ - زن زندگی آزادی 🇨🇦
-  - ۶ - زن زندگی آزادی 🇺🇸
+  - ۴ - زن زندگی آزادی 🇨🇦
+  - ۵ - زن زندگی آزادی 🇺🇸
   - ۷ - زن زندگی آزادی 🇸🇬
-  - ۸ - زن زندگی آزادی 🇺🇸
-  - ۱۱ - زن زندگی آزادی 🇨🇦
-  - ۱۲ - زن زندگی آزادی 🇨🇦
+  - ۱۳ - زن زندگی آزادی 🇨🇭
+  - ۲۰ - زن زندگی آزادی 🇨🇦
+  - ۲۳ - زن زندگی آزادی 🇨🇦
+  - ۲۷ - زن زندگی آزادی 🇭🇰
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
