@@ -60,7 +60,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "167.88.62.124",
+            "address": "216.152.152.187",
             "port": 22324,
             "users": [
               {
@@ -132,7 +132,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "216.152.152.187",
+            "address": "89.41.172.106",
             "port": 22324,
             "users": [
               {
@@ -156,7 +156,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "89.41.172.106",
+            "address": "66.163.118.73",
             "port": 22324,
             "users": [
               {
@@ -180,30 +180,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "66.163.118.73",
-            "port": 22324,
-            "users": [
-              {
-                "id": "04621bae-ab36-11ec-b909-0242ac120002",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      }
-    },
-    {
-      "tag": "proxy-7",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
             "address": "172.233.14.17",
             "port": 22324,
             "users": [
@@ -223,7 +199,60 @@
       }
     },
     {
+      "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "72.56.41.33",
+            "port": 40443,
+            "users": [
+              {
+                "id": "5be7fb02-b6a5-450f-b041-3243b98e8420",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "deepl.com",
+          "allowInsecure": false,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "tag": "proxy-8",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.237.70.226",
+            "port": 22324,
+            "users": [
+              {
+                "id": "04621bae-ab36-11ec-b909-0242ac120002",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
+      }
+    },
+    {
+      "tag": "proxy-9",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -261,12 +290,12 @@
       }
     },
     {
-      "tag": "proxy-9",
+      "tag": "proxy-10",
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "172.237.70.226",
+            "address": "89.223.95.77",
             "port": 22324,
             "users": [
               {
@@ -285,41 +314,12 @@
       }
     },
     {
-      "tag": "proxy-10",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "72.56.41.33",
-            "port": 40443,
-            "users": [
-              {
-                "id": "5be7fb02-b6a5-450f-b041-3243b98e8420",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "deepl.com",
-          "allowInsecure": false,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "tag": "proxy-11",
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "89.223.95.77",
+            "address": "167.88.62.124",
             "port": 22324,
             "users": [
               {
@@ -359,6 +359,64 @@
       "streamSettings": {
         "network": "tcp",
         "security": "none"
+      }
+    },
+    {
+      "tag": "proxy-13",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ee.dexlen.cc",
+            "port": 443,
+            "users": [
+              {
+                "id": "add59713-f5c6-4442-83a3-6bc9281f5c90",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "ee.dexlen.cc",
+          "allowInsecure": false,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "proxy-14",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "sw.dexlen.cc",
+            "port": 443,
+            "users": [
+              {
+                "id": "add59713-f5c6-02f0-83a3-6bc9281f5c90",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "sw.dexlen.cc",
+          "allowInsecure": false,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
