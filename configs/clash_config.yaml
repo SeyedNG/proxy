@@ -15,118 +15,81 @@ dns:
   - https://dns.google/dns-query
   - https://cloudflare-dns.com/dns-query
 proxies:
-- name: ۱ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 167.88.62.124
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۲ - زن زندگی آزادی 🇨🇦
-  type: vmess
-  server: 158.51.123.42
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
 - name: ۳ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 216.152.152.187
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۴ - زن زندگی آزادی 🇪🇸
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۶ - زن زندگی آزادی 🇸🇬
-  type: vmess
-  server: 172.237.70.226
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۹ - زن زندگی آزادی 🇫🇷
-  type: vmess
-  server: 45.80.215.8
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۱۵ - زن زندگی آزادی 🇨🇦
-  type: vmess
-  server: 66.163.113.176
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۱۶ - زن زندگی آزادی 🇭🇰
-  type: vmess
-  server: 89.223.95.77
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۱۷ - زن زندگی آزادی 🇺🇸
   type: vless
-  server: 72.56.41.33
-  port: 40443
-  uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
+  server: bounded-crammed.video-streams.org
+  port: 443
+  uuid: 18b91bec-1abf-45c0-bd06-f2c6ed22a125
   udp: true
   tls: true
-  flow: xtls-rprx-vision
-  servername: deepl.com
-  reality-opts:
-    public-key: Uvj5H9pDJP0HX2bN7NN7sCQwVCrC5N2NbKf-yuy1ikE
-    short-id: ee33
-  client-fingerprint: firefox
+  servername: bounded-crammed.video-streams.org
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: bounded-crammed.video-streams.org
+- name: ۴ - زن زندگی آزادی 🇺🇸
+  type: vless
+  server: grimness-backlogs.cdn-content.com
+  port: 443
+  uuid: 7d7c2c1a-5220-431e-afb0-3b588baffb83
+  udp: true
+  tls: true
+  servername: grimness-backlogs.cdn-content.com
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: grimness-backlogs.cdn-content.com
+- name: ۵ - زن زندگی آزادی 🇺🇸
+  type: vless
+  server: adheres-scruple.quick-cdn.net
+  port: 443
+  uuid: 316f013e-4cf9-4a02-8415-73c22932594a
+  udp: true
+  tls: true
+  servername: adheres-scruple.quick-cdn.net
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: adheres-scruple.quick-cdn.net
+- name: ۷ - زن زندگی آزادی 🇿🇦
+  type: ss
+  server: 4.221.224.246
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 3aN9XUwhvq1ujlsO
+  udp: true
 proxy-groups:
 - name: زن زندگی آزادی
   type: select
   proxies:
   - بهترین پینگ
-  - ۱ - زن زندگی آزادی 🇺🇸
-  - ۲ - زن زندگی آزادی 🇨🇦
   - ۳ - زن زندگی آزادی 🇺🇸
-  - ۴ - زن زندگی آزادی 🇪🇸
-  - ۶ - زن زندگی آزادی 🇸🇬
-  - ۹ - زن زندگی آزادی 🇫🇷
-  - ۱۵ - زن زندگی آزادی 🇨🇦
-  - ۱۶ - زن زندگی آزادی 🇭🇰
-  - ۱۷ - زن زندگی آزادی 🇺🇸
+  - ۴ - زن زندگی آزادی 🇺🇸
+  - ۵ - زن زندگی آزادی 🇺🇸
+  - ۷ - زن زندگی آزادی 🇿🇦
   - DIRECT
 - name: بهترین پینگ
   type: url-test
   proxies:
-  - ۱ - زن زندگی آزادی 🇺🇸
-  - ۲ - زن زندگی آزادی 🇨🇦
   - ۳ - زن زندگی آزادی 🇺🇸
-  - ۴ - زن زندگی آزادی 🇪🇸
-  - ۶ - زن زندگی آزادی 🇸🇬
-  - ۹ - زن زندگی آزادی 🇫🇷
-  - ۱۵ - زن زندگی آزادی 🇨🇦
-  - ۱۶ - زن زندگی آزادی 🇭🇰
-  - ۱۷ - زن زندگی آزادی 🇺🇸
+  - ۴ - زن زندگی آزادی 🇺🇸
+  - ۵ - زن زندگی آزادی 🇺🇸
+  - ۷ - زن زندگی آزادی 🇿🇦
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
