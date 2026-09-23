@@ -98,44 +98,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "grimness-backlogs.cdn-content.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "7d7c2c1a-5220-431e-afb0-3b588baffb83",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/ws",
-          "headers": {
-            "Host": "grimness-backlogs.cdn-content.com"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "grimness-backlogs.cdn-content.com",
-          "allowInsecure": false,
-          "alpn": [
-            "http/1.1"
-          ],
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-3",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "adheres-scruple.quick-cdn.net",
             "port": 443,
             "users": [
@@ -169,21 +131,41 @@
       }
     },
     {
-      "tag": "proxy-4",
-      "protocol": "shadowsocks",
+      "tag": "proxy-3",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "4.221.224.246",
+            "address": "grimness-backlogs.cdn-content.com",
             "port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "3aN9XUwhvq1ujlsO",
-            "level": 8
+            "users": [
+              {
+                "id": "7d7c2c1a-5220-431e-afb0-3b588baffb83",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "grimness-backlogs.cdn-content.com"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "grimness-backlogs.cdn-content.com",
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "chrome"
+        }
       }
     },
     {

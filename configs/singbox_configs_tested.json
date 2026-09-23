@@ -101,11 +101,10 @@
             "type": "selector",
             "tag": "زن زندگی آزادی",
             "outbounds": [
-                "۱ - زن زندگی آزادی 🇨🇭",
+                "۱ - زن زندگی آزادی 🇺🇸",
                 "۳ - زن زندگی آزادی 🇺🇸",
                 "۴ - زن زندگی آزادی 🇺🇸",
-                "۵ - زن زندگی آزادی 🇺🇸",
-                "۷ - زن زندگی آزادی 🇿🇦",
+                "۱۲ - زن زندگی آزادی 🇨🇭",
                 "direct"
             ]
         },
@@ -117,11 +116,10 @@
             "type": "urltest",
             "tag": "بهترین پینگ",
             "outbounds": [
-                "۱ - زن زندگی آزادی 🇨🇭",
+                "۱ - زن زندگی آزادی 🇺🇸",
                 "۳ - زن زندگی آزادی 🇺🇸",
                 "۴ - زن زندگی آزادی 🇺🇸",
-                "۵ - زن زندگی آزادی 🇺🇸",
-                "۷ - زن زندگی آزادی 🇿🇦"
+                "۱۲ - زن زندگی آزادی 🇨🇭"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interrupt_exist_connections": false,
@@ -129,25 +127,7 @@
         },
         {
             "type": "vless",
-            "tag": "۱ - زن زندگی آزادی 🇨🇭",
-            "server": "131.123.34.145",
-            "server_port": 8081,
-            "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-            "flow": "",
-            "tls": {
-                "enabled": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/vless-test",
-                "headers": {
-                    "Host": "131.123.34.145"
-                }
-            }
-        },
-        {
-            "type": "vless",
-            "tag": "۳ - زن زندگی آزادی 🇺🇸",
+            "tag": "۱ - زن زندگی آزادی 🇺🇸",
             "server": "bounded-crammed.video-streams.org",
             "server_port": 443,
             "uuid": "18b91bec-1abf-45c0-bd06-f2c6ed22a125",
@@ -169,6 +149,33 @@
                 "path": "/ws",
                 "headers": {
                     "Host": "bounded-crammed.video-streams.org"
+                }
+            }
+        },
+        {
+            "type": "vless",
+            "tag": "۳ - زن زندگی آزادی 🇺🇸",
+            "server": "adheres-scruple.quick-cdn.net",
+            "server_port": 443,
+            "uuid": "316f013e-4cf9-4a02-8415-73c22932594a",
+            "flow": "",
+            "tls": {
+                "enabled": true,
+                "server_name": "adheres-scruple.quick-cdn.net",
+                "insecure": false,
+                "alpn": [
+                    "http/1.1"
+                ],
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/ws",
+                "headers": {
+                    "Host": "adheres-scruple.quick-cdn.net"
                 }
             }
         },
@@ -201,38 +208,21 @@
         },
         {
             "type": "vless",
-            "tag": "۵ - زن زندگی آزادی 🇺🇸",
-            "server": "adheres-scruple.quick-cdn.net",
-            "server_port": 443,
-            "uuid": "316f013e-4cf9-4a02-8415-73c22932594a",
+            "tag": "۱۲ - زن زندگی آزادی 🇨🇭",
+            "server": "131.123.34.145",
+            "server_port": 8081,
+            "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
             "flow": "",
             "tls": {
-                "enabled": true,
-                "server_name": "adheres-scruple.quick-cdn.net",
-                "insecure": false,
-                "alpn": [
-                    "http/1.1"
-                ],
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
+                "enabled": false
             },
             "transport": {
                 "type": "ws",
-                "path": "/ws",
+                "path": "/vless-test",
                 "headers": {
-                    "Host": "adheres-scruple.quick-cdn.net"
+                    "Host": "131.123.34.145"
                 }
             }
-        },
-        {
-            "type": "shadowsocks",
-            "tag": "۷ - زن زندگی آزادی 🇿🇦",
-            "server": "4.221.224.246",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "3aN9XUwhvq1ujlsO"
         }
     ],
     "route": {

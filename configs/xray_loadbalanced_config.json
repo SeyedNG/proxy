@@ -59,69 +59,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "131.123.34.145",
-            "port": 8081,
-            "users": [
-              {
-                "id": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/vless-test",
-          "headers": {
-            "Host": "131.123.34.145"
-          }
-        }
-      },
-      "tag": "proxy-1"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "www.speedtest.net",
-            "port": 443,
-            "password": "humanity",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/assignment",
-          "headers": {
-            "Host": "www.ignitelimit.com"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "www.ignitelimit.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-2"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "bounded-crammed.video-streams.org",
             "port": 443,
             "users": [
@@ -146,6 +83,83 @@
         },
         "tlsSettings": {
           "serverName": "bounded-crammed.video-streams.org",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-1"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.18.26.90",
+            "port": 443,
+            "users": [
+              {
+                "id": "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "a.cwvps.eu.org"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "a.cwvps.eu.org",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "adheres-scruple.quick-cdn.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "316f013e-4cf9-4a02-8415-73c22932594a",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "adheres-scruple.quick-cdn.net"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "adheres-scruple.quick-cdn.net",
           "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
@@ -198,44 +212,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "adheres-scruple.quick-cdn.net",
-            "port": 443,
-            "users": [
-              {
-                "id": "316f013e-4cf9-4a02-8415-73c22932594a",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/ws",
-          "headers": {
-            "Host": "adheres-scruple.quick-cdn.net"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "adheres-scruple.quick-cdn.net",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-5"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "171.22.114.98",
             "port": 443,
             "users": [
@@ -259,25 +235,7 @@
           "fingerprint": "firefox"
         }
       },
-      "tag": "proxy-6"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "4.221.224.246",
-            "port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "3aN9XUwhvq1ujlsO",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-7"
+      "tag": "proxy-5"
     },
     {
       "protocol": "vless",
@@ -316,18 +274,51 @@
           ]
         }
       },
-      "tag": "proxy-8"
+      "tag": "proxy-6"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "render.com",
+            "port": 443,
+            "password": "humanity",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/assignment",
+          "headers": {
+            "Host": "www.ignitelimit.com"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "www.ignitelimit.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-7"
     },
     {
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "188.114.97.6",
-            "port": 443,
+            "address": "185.138.90.95",
+            "port": 8443,
             "users": [
               {
-                "id": "77dc177b-79d9-49ac-92e1-2f1011faa5e3",
+                "id": "a56a3bda-e89a-4182-a671-a1858bb0f47c",
                 "flow": "",
                 "encryption": "none",
                 "level": 8
@@ -337,24 +328,20 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/api/v2/b8ee4ba356df307c/stream",
-          "headers": {
-            "Host": "f871a986.69lover.site"
-          }
+        "network": "xhttp",
+        "security": "reality",
+        "xhttpSettings": {
+          "path": "/",
+          "host": "web.max.ru"
         },
-        "tlsSettings": {
-          "serverName": "f871a986.69lover.site",
-          "allowInsecure": false,
-          "fingerprint": "unsafe",
-          "alpn": [
-            "http/1.1"
-          ]
+        "realitySettings": {
+          "serverName": "web.max.ru",
+          "publicKey": "N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA",
+          "shortId": "7c8e3d4a9b1f26d3",
+          "fingerprint": "safari"
         }
       },
-      "tag": "proxy-9"
+      "tag": "proxy-8"
     },
     {
       "protocol": "vless",
@@ -392,6 +379,39 @@
           ]
         }
       },
+      "tag": "proxy-9"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "password": "humanity",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/assignment",
+          "headers": {
+            "Host": "www.ignitelimit.com"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "www.ignitelimit.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
       "tag": "proxy-10"
     },
     {
@@ -399,11 +419,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.18.26.90",
+            "address": "188.114.97.6",
             "port": 443,
             "users": [
               {
-                "id": "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46",
+                "id": "77dc177b-79d9-49ac-92e1-2f1011faa5e3",
                 "flow": "",
                 "encryption": "none",
                 "level": 8
@@ -416,22 +436,51 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "/ws",
+          "path": "/api/v2/b8ee4ba356df307c/stream",
           "headers": {
-            "Host": "a.cwvps.eu.org"
+            "Host": "f871a986.69lover.site"
           }
         },
         "tlsSettings": {
-          "serverName": "a.cwvps.eu.org",
+          "serverName": "f871a986.69lover.site",
           "allowInsecure": false,
-          "fingerprint": "",
+          "fingerprint": "unsafe",
           "alpn": [
-            "h2",
             "http/1.1"
           ]
         }
       },
       "tag": "proxy-11"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "131.123.34.145",
+            "port": 8081,
+            "users": [
+              {
+                "id": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/vless-test",
+          "headers": {
+            "Host": "131.123.34.145"
+          }
+        }
+      },
+      "tag": "proxy-12"
     },
     {
       "protocol": "freedom",
