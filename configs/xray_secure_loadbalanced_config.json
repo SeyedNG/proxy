@@ -89,6 +89,35 @@
       "settings": {
         "vnext": [
           {
+            "address": "condropolo.ggisopi.su",
+            "port": 443,
+            "users": [
+              {
+                "id": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "condropolo.ggisopi.su",
+          "allowInsecure": false,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "proxy-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
             "address": "163.128.99.14",
             "port": 443,
             "users": [
@@ -113,54 +142,7 @@
       }
     },
     {
-      "tag": "proxy-3",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "102.133.165.160",
-            "port": 16233,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Xsy8Ox4yOV3xLlpxtjzs3X",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      }
-    },
-    {
       "tag": "proxy-4",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "124.156.230.31",
-            "port": 48795,
-            "users": [
-              {
-                "id": "44557727-e197-45c5-9637-d8455491fa9a",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "aws.amazon.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -189,7 +171,7 @@
       }
     },
     {
-      "tag": "proxy-6",
+      "tag": "proxy-5",
       "protocol": "vless",
       "settings": {
         "vnext": [
