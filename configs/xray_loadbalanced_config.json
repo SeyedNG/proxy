@@ -55,64 +55,36 @@
   },
   "outbounds": [
     {
-      "protocol": "vless",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "172.67.174.37",
-            "port": 8880,
-            "users": [
-              {
-                "id": "b2c879ed-08a2-4a79-9c57-37c7db614e96",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
+            "address": "151.101.56.7",
+            "port": 443,
+            "password": "MiTiVPN",
+            "level": 8
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
+        "security": "tls",
         "wsSettings": {
-          "path": "/pyip=ProxyIP.KR.CMLiussss.net",
+          "path": "",
           "headers": {
-            "Host": "sweet-cake-1340.474-288.workers.dev"
+            "Host": "mitivpn---de--s---mitivpn-2.global.ssl.fastly.net"
           }
+        },
+        "tlsSettings": {
+          "serverName": "ssl.fastly.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy-1"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "47.90.153.88",
-            "port": 443,
-            "users": [
-              {
-                "id": "1e255ca5-93b1-4952-a838-0783dfc034d8",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.apple.com",
-          "publicKey": "QtYyp41YbDij6nygTaPPpqXqEGzDD3wYFI3YlfTjfBo",
-          "shortId": "6b85179e",
-          "fingerprint": "chrome"
-        }
-      },
-      "tag": "proxy-2"
     },
     {
       "protocol": "trojan",
@@ -144,39 +116,7 @@
           ]
         }
       },
-      "tag": "proxy-3"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "167.82.76.7",
-            "port": 443,
-            "password": "MiTiVPN",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
-          "headers": {
-            "Host": "mitivpn---us--s---mitivpn-2.global.ssl.fastly.net"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "ssl.fastly.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-4"
+      "tag": "proxy-2"
     },
     {
       "protocol": "trojan",
@@ -208,7 +148,37 @@
           ]
         }
       },
-      "tag": "proxy-5"
+      "tag": "proxy-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "47.90.153.88",
+            "port": 443,
+            "users": [
+              {
+                "id": "1e255ca5-93b1-4952-a838-0783dfc034d8",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.apple.com",
+          "publicKey": "QtYyp41YbDij6nygTaPPpqXqEGzDD3wYFI3YlfTjfBo",
+          "shortId": "6b85179e",
+          "fingerprint": "chrome"
+        }
+      },
+      "tag": "proxy-4"
     },
     {
       "protocol": "trojan",
@@ -240,14 +210,14 @@
           ]
         }
       },
-      "tag": "proxy-6"
+      "tag": "proxy-5"
     },
     {
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "151.101.56.7",
+            "address": "167.82.76.7",
             "port": 443,
             "password": "MiTiVPN",
             "level": 8
@@ -258,9 +228,9 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "",
+          "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
           "headers": {
-            "Host": "mitivpn---de--s---mitivpn-2.global.ssl.fastly.net"
+            "Host": "mitivpn---us--s---mitivpn-2.global.ssl.fastly.net"
           }
         },
         "tlsSettings": {
@@ -272,7 +242,7 @@
           ]
         }
       },
-      "tag": "proxy-7"
+      "tag": "proxy-6"
     },
     {
       "protocol": "trojan",
@@ -304,6 +274,36 @@
           ]
         }
       },
+      "tag": "proxy-7"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "tk1.high-speed-test-56424.me",
+            "port": 443,
+            "users": [
+              {
+                "id": "37615d66-5467-44a3-bc23-f2c3bef7f761",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "aws.amazon.com",
+          "publicKey": "p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM",
+          "shortId": "21270a66",
+          "fingerprint": "chrome"
+        }
+      },
       "tag": "proxy-8"
     },
     {
@@ -311,11 +311,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.97.6",
+            "address": "31.57.24.177",
             "port": 443,
             "users": [
               {
-                "id": "3c6d1933-b22a-484b-ac8a-63e24f5fba75",
+                "id": "c934b37d-f794-4b7d-a590-13f736ea5cab",
                 "flow": "",
                 "encryption": "none",
                 "level": 8
@@ -325,18 +325,16 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "xhttp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/imnotarealherox",
-          "headers": {
-            "Host": "server9.9966338.xyz"
-          }
+        "xhttpSettings": {
+          "path": "/SmlDER32Ja",
+          "host": "slv04.subsconnect.com"
         },
         "tlsSettings": {
-          "serverName": "server9.9966338.xyz",
+          "serverName": "slv04.subsconnect.com",
           "allowInsecure": false,
-          "fingerprint": "",
+          "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
@@ -346,34 +344,22 @@
       "tag": "proxy-9"
     },
     {
-      "protocol": "vless",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "199.232.78.159",
+            "address": "render.com",
             "port": 443,
-            "users": [
-              {
-                "id": "9e9fd625-e4d7-4944-ae7e-4145342fa5db",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
+            "password": "humanity",
+            "level": 8
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "pannn1.global.ssl.fastly.net"
-          }
-        },
         "tlsSettings": {
-          "serverName": "ssl.fastly.com",
+          "serverName": "render.com",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
@@ -397,16 +383,10 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/assignment",
-          "headers": {
-            "Host": "www.calmlunch.com"
-          }
-        },
         "tlsSettings": {
-          "serverName": "www.calmlunch.com",
+          "serverName": "www.speedtest.net",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
@@ -416,57 +396,6 @@
         }
       },
       "tag": "proxy-11"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "102.133.165.160",
-            "port": 16233,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Xsy8Ox4yOV3xLlpxtjzs3X",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-12"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "render.com",
-            "port": 443,
-            "password": "humanity",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/assignment",
-          "headers": {
-            "Host": "www.ignitelimit.com"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "www.ignitelimit.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-13"
     },
     {
       "protocol": "trojan",
@@ -486,17 +415,55 @@
         "wsSettings": {
           "path": "/assignment",
           "headers": {
-            "Host": "www.volumerOot.coM."
+            "Host": "www.ignitelimit.com"
           }
         },
         "tlsSettings": {
-          "serverName": "www.volumerOot.coM.",
+          "serverName": "www.ignitelimit.com",
           "allowInsecure": false,
           "fingerprint": "unsafe",
           "alpn": [
-            "http/1.1"
+            "h3",
+            " h2",
+            " http/1.1"
           ]
         }
+      },
+      "tag": "proxy-12"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "102.133.165.160",
+            "port": 16233,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Xsy8Ox4yOV3xLlpxtjzs3X",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-13"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "211.174.113.172",
+            "port": 49642,
+            "method": "aes-256-gcm",
+            "password": "ac9c0a7b",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
       },
       "tag": "proxy-14"
     },
@@ -524,11 +491,11 @@
         "wsSettings": {
           "path": "/api/v2/63e9687fa53e441c/stream",
           "headers": {
-            "Host": "us9.69lover.my"
+            "Host": "edfc774f.69lover.site"
           }
         },
         "tlsSettings": {
-          "serverName": "us9.69lover.my",
+          "serverName": "edfc774f.69lover.site",
           "allowInsecure": false,
           "fingerprint": "unsafe",
           "alpn": [
@@ -607,20 +574,41 @@
       "tag": "proxy-17"
     },
     {
-      "protocol": "shadowsocks",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "211.174.113.172",
-            "port": 49642,
-            "method": "aes-256-gcm",
-            "password": "ac9c0a7b",
-            "level": 8
+            "address": "199.232.78.159",
+            "port": 443,
+            "users": [
+              {
+                "id": "9e9fd625-e4d7-4944-ae7e-4145342fa5db",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "pannn1.global.ssl.fastly.net"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "ssl.fastly.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
       },
       "tag": "proxy-18"
     },
