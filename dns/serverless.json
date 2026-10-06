@@ -1875,6 +1875,7 @@
   },
   "dns": {
     "hosts": {
+      "geosite:category-ads-all": "#3",
       "cloudflare-dns.com": "challenges.cloudflare.com"
     },
     "servers": [
@@ -1903,6 +1904,7 @@
         "finalQuery": true
       },
       {
+        "tag": "domestic-dns",
         "address": "localhost",
         "domains": [
           "domain:ir",
@@ -1919,6 +1921,7 @@
           "geosite:rust",
           "full:challenges.cloudflare.com"
         ],
+        "timeoutMs": 12000,
         "finalQuery": true
       }
     ],
@@ -1966,7 +1969,7 @@
           "domainStrategy": "ForceIP",
           "happyEyeballs": {
             "tryDelayMs": 300,
-            "prioritizeIPv6": false,
+            "prioritizeIPv6": true,
             "interleave": 4,
             "maxConcurrentTry": 20
           }
@@ -1978,7 +1981,7 @@
       "protocol": "direct",
       "streamSettings": {
         "sockopt": {
-          "domainStrategy": "ForceIPv4v6"
+          "domainStrategy": "ForceIPv6v4"
         }
       }
     },
@@ -2014,7 +2017,7 @@
           "domainStrategy": "ForceIP",
           "happyEyeballs": {
             "tryDelayMs": 300,
-            "prioritizeIPv6": false,
+            "prioritizeIPv6": true,
             "interleave": 4,
             "maxConcurrentTry": 20
           }
@@ -2062,7 +2065,7 @@
           "domainStrategy": "ForceIP",
           "happyEyeballs": {
             "tryDelayMs": 300,
-            "prioritizeIPv6": false,
+            "prioritizeIPv6": true,
             "interleave": 4,
             "maxConcurrentTry": 20
           }
@@ -2074,7 +2077,7 @@
       "protocol": "direct",
       "streamSettings": {
         "sockopt": {
-          "domainStrategy": "ForceIPv4v6"
+          "domainStrategy": "ForceIPv6v4"
         },
         "finalmask": {
           "udp": [
@@ -2190,6 +2193,26 @@
   "routing": {
     "domainStrategy": "IPOnDemand",
     "rules": [
+      {
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
+      },
+      {
+        "outboundTag": "tcp-direct",
+        "inboundTag": [
+          "domestic-dns"
+        ],
+        "network": "tcp"
+      },
+      {
+        "outboundTag": "udp-direct",
+        "inboundTag": [
+          "domestic-dns"
+        ],
+        "network": "udp"
+      },
       {
         "outboundTag": "tcp-fragment-tls",
         "inboundTag": [
@@ -2323,7 +2346,7 @@
   }
 },
 {
-  "remarks": "Serverlessby Patterniha 2",
+  "remarks": "Serverless by Patterniha 2",
   "version": {
     "min": "26.6.27"
   },
@@ -2347,6 +2370,7 @@
   },
   "dns": {
     "hosts": {
+      "geosite:category-ads-all": "#3",
       "cloudflare-dns.com": "challenges.cloudflare.com"
     },
     "servers": [
@@ -2375,6 +2399,7 @@
         "finalQuery": true
       },
       {
+        "tag": "domestic-dns",
         "address": "localhost",
         "domains": [
           "domain:ir",
@@ -2391,6 +2416,7 @@
           "geosite:rust",
           "full:challenges.cloudflare.com"
         ],
+        "timeoutMs": 12000,
         "finalQuery": true
       }
     ],
@@ -2438,7 +2464,7 @@
           "domainStrategy": "ForceIP",
           "happyEyeballs": {
             "tryDelayMs": 300,
-            "prioritizeIPv6": false,
+            "prioritizeIPv6": true,
             "interleave": 4,
             "maxConcurrentTry": 20
           }
@@ -2450,7 +2476,7 @@
       "protocol": "direct",
       "streamSettings": {
         "sockopt": {
-          "domainStrategy": "ForceIPv4v6"
+          "domainStrategy": "ForceIPv6v4"
         }
       }
     },
@@ -2486,7 +2512,7 @@
           "domainStrategy": "ForceIP",
           "happyEyeballs": {
             "tryDelayMs": 300,
-            "prioritizeIPv6": false,
+            "prioritizeIPv6": true,
             "interleave": 4,
             "maxConcurrentTry": 20
           }
@@ -2534,7 +2560,7 @@
           "domainStrategy": "ForceIP",
           "happyEyeballs": {
             "tryDelayMs": 300,
-            "prioritizeIPv6": false,
+            "prioritizeIPv6": true,
             "interleave": 4,
             "maxConcurrentTry": 20
           }
@@ -2546,7 +2572,7 @@
       "protocol": "direct",
       "streamSettings": {
         "sockopt": {
-          "domainStrategy": "ForceIPv4v6"
+          "domainStrategy": "ForceIPv6v4"
         },
         "finalmask": {
           "udp": [
@@ -2662,6 +2688,26 @@
   "routing": {
     "domainStrategy": "IPOnDemand",
     "rules": [
+      {
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
+      },
+      {
+        "outboundTag": "tcp-direct",
+        "inboundTag": [
+          "domestic-dns"
+        ],
+        "network": "tcp"
+      },
+      {
+        "outboundTag": "udp-direct",
+        "inboundTag": [
+          "domestic-dns"
+        ],
+        "network": "udp"
+      },
       {
         "outboundTag": "tcp-fragment-tls",
         "inboundTag": [
