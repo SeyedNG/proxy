@@ -17,10 +17,10 @@ dns:
 proxies:
 - name: ۱ - زن زندگی آزادی 🇺🇸
   type: ss
-  server: 66.23.204.210
-  port: 16995
+  server: 156.146.38.167
+  port: 443
   cipher: aes-128-gcm
-  password: 89d3a0375a279f6e743fea76e72952a8
+  password: shadowsocks
   udp: true
 - name: ۲ - زن زندگی آزادی 🇺🇸
   type: ss
@@ -31,10 +31,10 @@ proxies:
   udp: true
 - name: ۳ - زن زندگی آزادی 🇺🇸
   type: ss
-  server: 156.146.38.167
-  port: 443
+  server: 66.23.204.210
+  port: 16995
   cipher: aes-128-gcm
-  password: shadowsocks
+  password: 89d3a0375a279f6e743fea76e72952a8
   udp: true
 - name: ۴ - زن زندگی آزادی 🇨🇦
   type: vmess
@@ -46,33 +46,22 @@ proxies:
   udp: true
   tls: false
 - name: ۵ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 216.152.152.187
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: trojan
+  server: 167.82.76.27
+  port: 443
+  password: mitivpn
   udp: true
-  tls: false
-- name: ۶ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/NLSus---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11
+    headers:
+      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
 - name: ۷ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۸ - زن زندگی آزادی 🇺🇸
   type: vmess
   server: 129.146.77.248
   port: 39495
@@ -86,34 +75,30 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: 129.146.77.248
+- name: ۸ - زن زندگی آزادی 🇺🇸
+  type: ss
+  server: 15.204.233.41
+  port: 8882
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  udp: true
 - name: ۹ - زن زندگی آزادی 🇺🇸
-  type: vmess
-  server: 216.106.185.141
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-- name: ۱۱ - زن زندگی آزادی 🇩🇪
-  type: vmess
-  server: aidrivercat.org
+  type: trojan
+  server: 167.82.76.7
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
+  password: mitivpn
   udp: true
-  tls: true
+  sni: ssl.fastly.com
   skip-cert-verify: false
   alpn:
-  - h2
   - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /linkvws
+    path: ''
     headers:
-      Host: aidrivercat.org
-- name: ۱۲ - زن زندگی آزادی 🇺🇸
+      Host: mitivpn---deb--s---mitivpn-4.global.ssl.fastly.net
+- name: ۱۰ - زن زندگی آزادی 🇺🇸
   type: trojan
   server: 199.232.78.101
   port: 443
@@ -126,26 +111,19 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: ''
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
     headers:
       Host: mitivpn---deb--s---mitivpn-1.global.ssl.fastly.net
-- name: ۱۴ - زن زندگی آزادی 🇺🇸
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: mitivpn
+- name: ۱۱ - زن زندگی آزادی 🇬🇧
+  type: vmess
+  server: 186.190.211.147
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
-- name: ۱۶ - زن زندگی آزادی 🇺🇸
+  tls: false
+- name: ۱۲ - زن زندگی آزادی 🇺🇸
   type: trojan
   server: 199.232.78.160
   port: 443
@@ -155,13 +133,59 @@ proxies:
   skip-cert-verify: false
   alpn:
   - http/1.1
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/D-e1i@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
     headers:
       Host: mitivpn---deb--s---mitivpn-2.global.ssl.fastly.net
-- name: ۱۹ - زن زندگی آزادی 🇸🇬
+- name: ۱۳ - زن زندگی آزادی 🇩🇪
+  type: vmess
+  server: 185.177.229.129
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+- name: ۱۴ - زن زندگی آزادی 🇬🇧
+  type: vmess
+  server: 57.129.132.223
+  port: 80
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: google.com
+- name: ۱۸ - زن زندگی آزادی 🇯🇵
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: jp01.a0a.xyz
+- name: ۲۰ - زن زندگی آزادی 🇺🇸
+  type: vmess
+  server: 31.77.8.97
+  port: 110
+  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+- name: ۲۱ - زن زندگی آزادی 🇸🇬
   type: vmess
   server: 149.88.23.207
   port: 18000
@@ -170,7 +194,7 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: ۲۰ - زن زندگی آزادی 🇸🇬
+- name: ۲۲ - زن زندگی آزادی 🇸🇬
   type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
@@ -179,45 +203,26 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: ۲۴ - زن زندگی آزادی 🇦🇪
-  type: vless
-  server: 157.228.155.185
+- name: ۲۳ - زن زندگی آزادی 🇭🇰
+  type: vmess
+  server: 194.99.79.26
   port: 443
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
-  flow: xtls-rprx-vision
-  servername: addons.mozilla.org
-  reality-opts:
-    public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg
-    short-id: 5ea112e8
-  client-fingerprint: randomized
-- name: ۲۵ - زن زندگی آزادی 🇸🇬
-  type: trojan
-  server: 18.143.92.167
-  port: 443
-  password: UX82473651
-  udp: true
-  sni: glowing-marmoset.rooster465.autos
+  servername: aksai.org
   skip-cert-verify: false
   alpn:
   - h2
   - http/1.1
-- name: ۲۶ - زن زندگی آزادی 🇺🇸
-  type: ss
-  server: 15.204.233.41
-  port: 8882
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  udp: true
-- name: ۲۷ - زن زندگی آزادی 🇬🇧
-  type: ss
-  server: 143.20.71.17
-  port: 35016
-  cipher: aes-128-gcm
-  password: 6ee847c4-04ef-4786-9720-eb6f73fbd80b
-  udp: true
-- name: ۲۸ - زن زندگی آزادی 🇦🇺
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
+- name: ۲۴ - زن زندگی آزادی 🇧🇷
   type: vmess
   server: aksai.org
   port: 443
@@ -235,49 +240,42 @@ proxies:
     path: /linkvws
     headers:
       Host: aksai.org
-- name: ۳۱ - زن زندگی آزادی 🇭🇰
-  type: vmess
-  server: 93ucrn4i0pffuabk.v.3dns.vip
+- name: ۲۷ - زن زندگی آزادی 🇬🇧
+  type: ss
+  server: 143.20.71.17
+  port: 35016
+  cipher: aes-128-gcm
+  password: 6ee847c4-04ef-4786-9720-eb6f73fbd80b
+  udp: true
+- name: ۳۰ - زن زندگی آزادی 🇿🇦
+  type: ss
+  server: 102.37.156.224
   port: 443
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: ۳۱ - زن زندگی آزادی 🇺🇸
+  type: vmess
+  server: 216.152.152.187
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 93ucrn4i0pffuabk.v.3dns.vip
-- name: ۳۳ - زن زندگی آزادی 🇮🇷
+  tls: false
+- name: ۳۲ - زن زندگی آزادی 🇦🇪
   type: vless
-  server: khordad.moonlight13.ir
-  port: 4109
-  uuid: 6def81ac-a46f-4490-a81a-eaaa6b257b1c
+  server: 157.228.155.185
+  port: 443
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
   udp: true
   tls: true
   flow: xtls-rprx-vision
-  servername: sheets.google.com
+  servername: addons.mozilla.org
   reality-opts:
-    public-key: 23--GkjUax0cCnXtnqrD9VtAVZftA4ObXOzCNy0uaBA
-    short-id: 9c5eda5e06390754
-  client-fingerprint: chrome
-- name: ۳۵ - زن زندگی آزادی 🇳🇱
-  type: vless
-  server: 185.236.20.142
-  port: 6443
-  uuid: dfe8ea9e-fd77-48e6-86ee-7bc1019de1e7
-  udp: true
-  tls: true
-  servername: ok.ru
-  reality-opts:
-    public-key: UJASCPCy2vuNWu3q2C7vVte-HxG0r0XI83pgxBFBv1E
-    short-id: 9c56af76
-  client-fingerprint: firefox
+    public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg
+    short-id: 5ea112e8
+  client-fingerprint: randomized
 proxy-groups:
 - name: زن زندگی آزادی
   type: select
@@ -288,24 +286,24 @@ proxy-groups:
   - ۳ - زن زندگی آزادی 🇺🇸
   - ۴ - زن زندگی آزادی 🇨🇦
   - ۵ - زن زندگی آزادی 🇺🇸
-  - ۶ - زن زندگی آزادی 🇺🇸
   - ۷ - زن زندگی آزادی 🇺🇸
   - ۸ - زن زندگی آزادی 🇺🇸
   - ۹ - زن زندگی آزادی 🇺🇸
-  - ۱۱ - زن زندگی آزادی 🇩🇪
+  - ۱۰ - زن زندگی آزادی 🇺🇸
+  - ۱۱ - زن زندگی آزادی 🇬🇧
   - ۱۲ - زن زندگی آزادی 🇺🇸
-  - ۱۴ - زن زندگی آزادی 🇺🇸
-  - ۱۶ - زن زندگی آزادی 🇺🇸
-  - ۱۹ - زن زندگی آزادی 🇸🇬
-  - ۲۰ - زن زندگی آزادی 🇸🇬
-  - ۲۴ - زن زندگی آزادی 🇦🇪
-  - ۲۵ - زن زندگی آزادی 🇸🇬
-  - ۲۶ - زن زندگی آزادی 🇺🇸
+  - ۱۳ - زن زندگی آزادی 🇩🇪
+  - ۱۴ - زن زندگی آزادی 🇬🇧
+  - ۱۸ - زن زندگی آزادی 🇯🇵
+  - ۲۰ - زن زندگی آزادی 🇺🇸
+  - ۲۱ - زن زندگی آزادی 🇸🇬
+  - ۲۲ - زن زندگی آزادی 🇸🇬
+  - ۲۳ - زن زندگی آزادی 🇭🇰
+  - ۲۴ - زن زندگی آزادی 🇧🇷
   - ۲۷ - زن زندگی آزادی 🇬🇧
-  - ۲۸ - زن زندگی آزادی 🇦🇺
-  - ۳۱ - زن زندگی آزادی 🇭🇰
-  - ۳۳ - زن زندگی آزادی 🇮🇷
-  - ۳۵ - زن زندگی آزادی 🇳🇱
+  - ۳۰ - زن زندگی آزادی 🇿🇦
+  - ۳۱ - زن زندگی آزادی 🇺🇸
+  - ۳۲ - زن زندگی آزادی 🇦🇪
   - DIRECT
 - name: بهترین پینگ
   type: url-test
@@ -315,24 +313,24 @@ proxy-groups:
   - ۳ - زن زندگی آزادی 🇺🇸
   - ۴ - زن زندگی آزادی 🇨🇦
   - ۵ - زن زندگی آزادی 🇺🇸
-  - ۶ - زن زندگی آزادی 🇺🇸
   - ۷ - زن زندگی آزادی 🇺🇸
   - ۸ - زن زندگی آزادی 🇺🇸
   - ۹ - زن زندگی آزادی 🇺🇸
-  - ۱۱ - زن زندگی آزادی 🇩🇪
+  - ۱۰ - زن زندگی آزادی 🇺🇸
+  - ۱۱ - زن زندگی آزادی 🇬🇧
   - ۱۲ - زن زندگی آزادی 🇺🇸
-  - ۱۴ - زن زندگی آزادی 🇺🇸
-  - ۱۶ - زن زندگی آزادی 🇺🇸
-  - ۱۹ - زن زندگی آزادی 🇸🇬
-  - ۲۰ - زن زندگی آزادی 🇸🇬
-  - ۲۴ - زن زندگی آزادی 🇦🇪
-  - ۲۵ - زن زندگی آزادی 🇸🇬
-  - ۲۶ - زن زندگی آزادی 🇺🇸
+  - ۱۳ - زن زندگی آزادی 🇩🇪
+  - ۱۴ - زن زندگی آزادی 🇬🇧
+  - ۱۸ - زن زندگی آزادی 🇯🇵
+  - ۲۰ - زن زندگی آزادی 🇺🇸
+  - ۲۱ - زن زندگی آزادی 🇸🇬
+  - ۲۲ - زن زندگی آزادی 🇸🇬
+  - ۲۳ - زن زندگی آزادی 🇭🇰
+  - ۲۴ - زن زندگی آزادی 🇧🇷
   - ۲۷ - زن زندگی آزادی 🇬🇧
-  - ۲۸ - زن زندگی آزادی 🇦🇺
-  - ۳۱ - زن زندگی آزادی 🇭🇰
-  - ۳۳ - زن زندگی آزادی 🇮🇷
-  - ۳۵ - زن زندگی آزادی 🇳🇱
+  - ۳۰ - زن زندگی آزادی 🇿🇦
+  - ۳۱ - زن زندگی آزادی 🇺🇸
+  - ۳۲ - زن زندگی آزادی 🇦🇪
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
