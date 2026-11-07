@@ -1,0 +1,1869 @@
+{
+  "log": {
+    "disabled": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "udp",
+        "server": "8.8.8.8",
+        "detour": "بهترین پینگ🇮🇷",
+        "tag": "dns-remote"
+      },
+      {
+        "type": "local",
+        "tag": "dns-direct"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/28"
+      ],
+      "mtu": 9000,
+      "auto_route": true,
+      "stack": "mixed"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "rule_set": [
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "final": "✅ انتخاب دستی",
+    "rule_set": [
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geosite-category-ads-all.srs",
+        "download_detour": "✅ انتخاب دستی",
+        "update_interval": "7d"
+      },
+      {
+        "tag": "geosite-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geosite-ir.srs",
+        "download_detour": "✅ انتخاب دستی",
+        "update_interval": "7d"
+      },
+      {
+        "tag": "geoip-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geoip-ir.srs",
+        "download_detour": "✅ انتخاب دستی",
+        "update_interval": "7d"
+      }
+    ]
+  },
+  "endpoints": [
+    {
+      "tag": "زن زندگی آزادی 1 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8996:d3ce:66f1:8796:d6a1/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.119",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            124,
+            245,
+            25
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KKdxgqAs3iqHGHvK9fH2eI3wvG51VVWHwEld6zn3AU4=",
+      "jc": 7,
+      "jmin": 68,
+      "jmax": 174,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "a.fsdn.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 1 🌍",
+      "detour": "زن زندگی آزادی 1 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879a:4c45:c4b3:d074:d9f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.255",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            114,
+            138,
+            15
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "6BzqZ5y2nKb3OQNrj+vM4quE+6lh9Nq4Cdkx1EOS2Go="
+    },
+    {
+      "tag": "زن زندگی آزادی 2 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879a:4c45:c4b3:d074:d9f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.255",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            114,
+            138,
+            15
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "6BzqZ5y2nKb3OQNrj+vM4quE+6lh9Nq4Cdkx1EOS2Go=",
+      "jc": 7,
+      "jmin": 77,
+      "jmax": 257,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "bing.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 2 🌍",
+      "detour": "زن زندگی آزادی 2 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:833d:1376:6927:e784:e3ee/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.109",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            87,
+            61,
+            53
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oIgbn8EAhFcJ30FCbu3G8c+wsUYn0LwOyr31KgVjEUg="
+    },
+    {
+      "tag": "زن زندگی آزادی 3 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:833d:1376:6927:e784:e3ee/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.109",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            87,
+            61,
+            53
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oIgbn8EAhFcJ30FCbu3G8c+wsUYn0LwOyr31KgVjEUg=",
+      "jc": 9,
+      "jmin": 41,
+      "jmax": 237,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.apple.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 3 🌍",
+      "detour": "زن زندگی آزادی 3 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879c:ecc0:3923:955a:b1a/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.248",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            52,
+            78,
+            139
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oHq9m3BPpZ5i+a9xRkp/qFBD7lSp04hWYfqK8WgExUs="
+    },
+    {
+      "tag": "زن زندگی آزادی 4 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879c:ecc0:3923:955a:b1a/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.248",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            52,
+            78,
+            139
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oHq9m3BPpZ5i+a9xRkp/qFBD7lSp04hWYfqK8WgExUs=",
+      "jc": 5,
+      "jmin": 47,
+      "jmax": 143,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "sourceforge.net",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 4 🌍",
+      "detour": "زن زندگی آزادی 4 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8df8:c098:5d6b:2f50:67a8/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.145",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            80,
+            101,
+            113
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "MKfXfi9k7a8XVVco+yTMckISoZV4gvhpIz92owTbcUo="
+    },
+    {
+      "tag": "زن زندگی آزادی 5 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8df8:c098:5d6b:2f50:67a8/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.145",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            80,
+            101,
+            113
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "MKfXfi9k7a8XVVco+yTMckISoZV4gvhpIz92owTbcUo=",
+      "jc": 10,
+      "jmin": 75,
+      "jmax": 248,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "pinterest.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 5 🌍",
+      "detour": "زن زندگی آزادی 5 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8575:be45:9a44:ffe1:ce39/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.139",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            120,
+            138,
+            226
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "aAqwC3ILd7dp9P7eorhKb+v1WYjUb8ftqa23L487nVU="
+    },
+    {
+      "tag": "زن زندگی آزادی 6 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8575:be45:9a44:ffe1:ce39/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.139",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            120,
+            138,
+            226
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "aAqwC3ILd7dp9P7eorhKb+v1WYjUb8ftqa23L487nVU=",
+      "jc": 9,
+      "jmin": 64,
+      "jmax": 195,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.kimi.ai",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 6 🌍",
+      "detour": "زن زندگی آزادی 6 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8252:b945:3d6b:8539:ea28/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.109",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            18,
+            29,
+            131
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "cHyGNPt3S5UCgf9oMbf4mQIUWMjBr7qzxpbO0QPcIVQ="
+    },
+    {
+      "tag": "زن زندگی آزادی 7 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8252:b945:3d6b:8539:ea28/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.109",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            18,
+            29,
+            131
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "cHyGNPt3S5UCgf9oMbf4mQIUWMjBr7qzxpbO0QPcIVQ=",
+      "jc": 6,
+      "jmin": 48,
+      "jmax": 241,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "cdn.jsdelivr.net",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 7 🌍",
+      "detour": "زن زندگی آزادی 7 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8db6:7fb3:464c:63e6:bc24/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.122",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            220,
+            242,
+            47
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KO9WeQF8G06tIwFdjlw88BJq+mGf4530yDuPm9wo5F0="
+    },
+    {
+      "tag": "زن زندگی آزادی 8 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8db6:7fb3:464c:63e6:bc24/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.122",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            220,
+            242,
+            47
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KO9WeQF8G06tIwFdjlw88BJq+mGf4530yDuPm9wo5F0=",
+      "jc": 5,
+      "jmin": 59,
+      "jmax": 176,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.oracle.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 8 🌍",
+      "detour": "زن زندگی آزادی 8 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8350:db72:c958:1752:40f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.38",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            28,
+            245,
+            246
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "wKwAsF5bgrWkeqxonbE0c9K+2C4dy1TQzMG7DI6uhVA="
+    },
+    {
+      "tag": "زن زندگی آزادی 9 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8350:db72:c958:1752:40f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.38",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            28,
+            245,
+            246
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "wKwAsF5bgrWkeqxonbE0c9K+2C4dy1TQzMG7DI6uhVA=",
+      "jc": 7,
+      "jmin": 66,
+      "jmax": 229,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.kimi.ai",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 9 🌍",
+      "detour": "زن زندگی آزادی 9 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8e08:2945:4022:9f1b:6410/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.96",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            116,
+            144,
+            110
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SOBMYPDeiINz6CBbbuAZu4eX7vJm4pE7YKT7KTaW+3U="
+    },
+    {
+      "tag": "زن زندگی آزادی 10 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8e08:2945:4022:9f1b:6410/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.96",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            116,
+            144,
+            110
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SOBMYPDeiINz6CBbbuAZu4eX7vJm4pE7YKT7KTaW+3U=",
+      "jc": 5,
+      "jmin": 41,
+      "jmax": 228,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.ntu.edu.sg",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 10 🌍",
+      "detour": "زن زندگی آزادی 10 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8527:fde7:9095:8a4:8699/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.80",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            242,
+            207,
+            33
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SFLCFTqZDdt+QkT+S5aMQsRZYdiAqVuJMM4BmIJqGnU="
+    },
+    {
+      "tag": "زن زندگی آزادی 11 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8527:fde7:9095:8a4:8699/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.80",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            242,
+            207,
+            33
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SFLCFTqZDdt+QkT+S5aMQsRZYdiAqVuJMM4BmIJqGnU=",
+      "jc": 8,
+      "jmin": 76,
+      "jmax": 189,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.apple.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 11 🌍",
+      "detour": "زن زندگی آزادی 11 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8292:b95d:9535:929e:ba3/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.119",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            9,
+            220,
+            109
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KKwAj+eL5PEOY6LJto+IeNRL8mLbV7iQ/DPN/bvOa1A="
+    },
+    {
+      "tag": "زن زندگی آزادی 12 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8292:b95d:9535:929e:ba3/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.119",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            9,
+            220,
+            109
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KKwAj+eL5PEOY6LJto+IeNRL8mLbV7iQ/DPN/bvOa1A=",
+      "jc": 8,
+      "jmin": 72,
+      "jmax": 209,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.stanford.edu",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 12 🌍",
+      "detour": "زن زندگی آزادی 12 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8960:1f9c:3bff:3126:25c3/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "162.159.195.140",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            145,
+            34,
+            16
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "GHuZQxwcX3+tOaaUXXAiSmnqkCVSTK3eeDQqu56VVE4="
+    },
+    {
+      "tag": "زن زندگی آزادی 13 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8996:d3ce:66f1:8796:d6a1/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:75d5:bcc6:48ce:1649",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            124,
+            245,
+            25
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KKdxgqAs3iqHGHvK9fH2eI3wvG51VVWHwEld6zn3AU4=",
+      "jc": 7,
+      "jmin": 73,
+      "jmax": 166,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.kimi.ai",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 13 🌍",
+      "detour": "زن زندگی آزادی 13 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879a:4c45:c4b3:d074:d9f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:7fe3:ed15:e02:bb07",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            114,
+            138,
+            15
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "6BzqZ5y2nKb3OQNrj+vM4quE+6lh9Nq4Cdkx1EOS2Go="
+    },
+    {
+      "tag": "زن زندگی آزادی 14 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879a:4c45:c4b3:d074:d9f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:7fe3:ed15:e02:bb07",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            114,
+            138,
+            15
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "6BzqZ5y2nKb3OQNrj+vM4quE+6lh9Nq4Cdkx1EOS2Go=",
+      "jc": 5,
+      "jmin": 55,
+      "jmax": 140,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "istio.io",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 14 🌍",
+      "detour": "زن زندگی آزادی 14 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:833d:1376:6927:e784:e3ee/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:210d:c976:6ee:1a2",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            87,
+            61,
+            53
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oIgbn8EAhFcJ30FCbu3G8c+wsUYn0LwOyr31KgVjEUg="
+    },
+    {
+      "tag": "زن زندگی آزادی 15 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:833d:1376:6927:e784:e3ee/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:210d:c976:6ee:1a2",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            87,
+            61,
+            53
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oIgbn8EAhFcJ30FCbu3G8c+wsUYn0LwOyr31KgVjEUg=",
+      "jc": 10,
+      "jmin": 79,
+      "jmax": 252,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "cloudflare.dev",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 15 🌍",
+      "detour": "زن زندگی آزادی 15 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879c:ecc0:3923:955a:b1a/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:8b39:595c:6845:545c",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            52,
+            78,
+            139
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oHq9m3BPpZ5i+a9xRkp/qFBD7lSp04hWYfqK8WgExUs="
+    },
+    {
+      "tag": "زن زندگی آزادی 16 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:879c:ecc0:3923:955a:b1a/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:8b39:595c:6845:545c",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            52,
+            78,
+            139
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "oHq9m3BPpZ5i+a9xRkp/qFBD7lSp04hWYfqK8WgExUs=",
+      "jc": 8,
+      "jmin": 42,
+      "jmax": 127,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "sourceforge.net",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 16 🌍",
+      "detour": "زن زندگی آزادی 16 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8df8:c098:5d6b:2f50:67a8/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:94a1:e1f1:fdc1:7a42",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            80,
+            101,
+            113
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "MKfXfi9k7a8XVVco+yTMckISoZV4gvhpIz92owTbcUo="
+    },
+    {
+      "tag": "زن زندگی آزادی 17 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8df8:c098:5d6b:2f50:67a8/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:94a1:e1f1:fdc1:7a42",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            80,
+            101,
+            113
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "MKfXfi9k7a8XVVco+yTMckISoZV4gvhpIz92owTbcUo=",
+      "jc": 6,
+      "jmin": 53,
+      "jmax": 139,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "vuejs.org",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 17 🌍",
+      "detour": "زن زندگی آزادی 17 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8575:be45:9a44:ffe1:ce39/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:5e58:7f4f:4804:af0a",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            120,
+            138,
+            226
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "aAqwC3ILd7dp9P7eorhKb+v1WYjUb8ftqa23L487nVU="
+    },
+    {
+      "tag": "زن زندگی آزادی 18 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8575:be45:9a44:ffe1:ce39/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:5e58:7f4f:4804:af0a",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            120,
+            138,
+            226
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "aAqwC3ILd7dp9P7eorhKb+v1WYjUb8ftqa23L487nVU=",
+      "jc": 9,
+      "jmin": 40,
+      "jmax": 240,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "imgur.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 18 🌍",
+      "detour": "زن زندگی آزادی 18 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8252:b945:3d6b:8539:ea28/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:104f:49aa:357a:cdd5",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            18,
+            29,
+            131
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "cHyGNPt3S5UCgf9oMbf4mQIUWMjBr7qzxpbO0QPcIVQ="
+    },
+    {
+      "tag": "زن زندگی آزادی 19 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8252:b945:3d6b:8539:ea28/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:104f:49aa:357a:cdd5",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            18,
+            29,
+            131
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "cHyGNPt3S5UCgf9oMbf4mQIUWMjBr7qzxpbO0QPcIVQ=",
+      "jc": 10,
+      "jmin": 43,
+      "jmax": 178,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.ox.ac.uk",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 19 🌍",
+      "detour": "زن زندگی آزادی 19 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8db6:7fb3:464c:63e6:bc24/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:5a:fe50:a4ae:9cf7",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            220,
+            242,
+            47
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KO9WeQF8G06tIwFdjlw88BJq+mGf4530yDuPm9wo5F0="
+    },
+    {
+      "tag": "زن زندگی آزادی 20 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8db6:7fb3:464c:63e6:bc24/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:5a:fe50:a4ae:9cf7",
+          "port": 891,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            220,
+            242,
+            47
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KO9WeQF8G06tIwFdjlw88BJq+mGf4530yDuPm9wo5F0=",
+      "jc": 5,
+      "jmin": 44,
+      "jmax": 170,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "speed.cloudflare.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 20 🌍",
+      "detour": "زن زندگی آزادی 20 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8350:db72:c958:1752:40f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:cf21:83da:595b:5b83",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            28,
+            245,
+            246
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "wKwAsF5bgrWkeqxonbE0c9K+2C4dy1TQzMG7DI6uhVA="
+    },
+    {
+      "tag": "زن زندگی آزادی 21 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8350:db72:c958:1752:40f4/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:cf21:83da:595b:5b83",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            28,
+            245,
+            246
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "wKwAsF5bgrWkeqxonbE0c9K+2C4dy1TQzMG7DI6uhVA=",
+      "jc": 4,
+      "jmin": 73,
+      "jmax": 203,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "yahoo.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 21 🌍",
+      "detour": "زن زندگی آزادی 21 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8e08:2945:4022:9f1b:6410/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:3962:cea3:3a0a:aead",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            116,
+            144,
+            110
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SOBMYPDeiINz6CBbbuAZu4eX7vJm4pE7YKT7KTaW+3U="
+    },
+    {
+      "tag": "زن زندگی آزادی 22 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8e08:2945:4022:9f1b:6410/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:3962:cea3:3a0a:aead",
+          "port": 500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            116,
+            144,
+            110
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SOBMYPDeiINz6CBbbuAZu4eX7vJm4pE7YKT7KTaW+3U=",
+      "jc": 5,
+      "jmin": 68,
+      "jmax": 267,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.oracle.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 22 🌍",
+      "detour": "زن زندگی آزادی 22 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8527:fde7:9095:8a4:8699/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:3c6d:a344:df80:f67",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            242,
+            207,
+            33
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SFLCFTqZDdt+QkT+S5aMQsRZYdiAqVuJMM4BmIJqGnU="
+    },
+    {
+      "tag": "زن زندگی آزادی 23 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8527:fde7:9095:8a4:8699/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d0:0:3c6d:a344:df80:f67",
+          "port": 988,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            242,
+            207,
+            33
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "SFLCFTqZDdt+QkT+S5aMQsRZYdiAqVuJMM4BmIJqGnU=",
+      "jc": 6,
+      "jmin": 87,
+      "jmax": 239,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "jsdelivr.com",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 23 🌍",
+      "detour": "زن زندگی آزادی 23 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8292:b95d:9535:929e:ba3/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:ba83:d967:f72:6e99",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            9,
+            220,
+            109
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KKwAj+eL5PEOY6LJto+IeNRL8mLbV7iQ/DPN/bvOa1A="
+    },
+    {
+      "tag": "زن زندگی آزادی 24 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8292:b95d:9535:929e:ba3/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:ba83:d967:f72:6e99",
+          "port": 4500,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            9,
+            220,
+            109
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "KKwAj+eL5PEOY6LJto+IeNRL8mLbV7iQ/DPN/bvOa1A=",
+      "jc": 5,
+      "jmin": 84,
+      "jmax": 154,
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "h1": 1,
+      "h2": 2,
+      "h3": 3,
+      "h4": 4,
+      "id": "www.mit.edu",
+      "ip": "quic",
+      "ib": "chrome"
+    },
+    {
+      "tag": "زن زندگی آزادی 24 🌍",
+      "detour": "زن زندگی آزادی 24 🇮🇷",
+      "type": "wireguard",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8960:1f9c:3bff:3126:25c3/128"
+      ],
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "2606:4700:d1:0:9df4:7c88:fe01:6c20",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [
+            145,
+            34,
+            16
+          ],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 25
+        }
+      ],
+      "private_key": "GHuZQxwcX3+tOaaUXXAiSmnqkCVSTK3eeDQqu56VVE4="
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "✅ انتخاب دستی",
+      "outbounds": [
+        "بهترین پینگ🇮🇷",
+        "بهترین پینگ 🌍",
+        "زن زندگی آزادی 1 🇮🇷",
+        "زن زندگی آزادی 2 🇮🇷",
+        "زن زندگی آزادی 3 🇮🇷",
+        "زن زندگی آزادی 4 🇮🇷",
+        "زن زندگی آزادی 5 🇮🇷",
+        "زن زندگی آزادی 6 🇮🇷",
+        "زن زندگی آزادی 7 🇮🇷",
+        "زن زندگی آزادی 8 🇮🇷",
+        "زن زندگی آزادی 9 🇮🇷",
+        "زن زندگی آزادی 10 🇮🇷",
+        "زن زندگی آزادی 11 🇮🇷",
+        "زن زندگی آزادی 12 🇮🇷",
+        "زن زندگی آزادی 13 🇮🇷",
+        "زن زندگی آزادی 14 🇮🇷",
+        "زن زندگی آزادی 15 🇮🇷",
+        "زن زندگی آزادی 16 🇮🇷",
+        "زن زندگی آزادی 17 🇮🇷",
+        "زن زندگی آزادی 18 🇮🇷",
+        "زن زندگی آزادی 19 🇮🇷",
+        "زن زندگی آزادی 20 🇮🇷",
+        "زن زندگی آزادی 21 🇮🇷",
+        "زن زندگی آزادی 22 🇮🇷",
+        "زن زندگی آزادی 23 🇮🇷",
+        "زن زندگی آزادی 24 🇮🇷",
+        "زن زندگی آزادی 1 🌍",
+        "زن زندگی آزادی 2 🌍",
+        "زن زندگی آزادی 3 🌍",
+        "زن زندگی آزادی 4 🌍",
+        "زن زندگی آزادی 5 🌍",
+        "زن زندگی آزادی 6 🌍",
+        "زن زندگی آزادی 7 🌍",
+        "زن زندگی آزادی 8 🌍",
+        "زن زندگی آزادی 9 🌍",
+        "زن زندگی آزادی 10 🌍",
+        "زن زندگی آزادی 11 🌍",
+        "زن زندگی آزادی 12 🌍",
+        "زن زندگی آزادی 13 🌍",
+        "زن زندگی آزادی 14 🌍",
+        "زن زندگی آزادی 15 🌍",
+        "زن زندگی آزادی 16 🌍",
+        "زن زندگی آزادی 17 🌍",
+        "زن زندگی آزادی 18 🌍",
+        "زن زندگی آزادی 19 🌍",
+        "زن زندگی آزادی 20 🌍",
+        "زن زندگی آزادی 21 🌍",
+        "زن زندگی آزادی 22 🌍",
+        "زن زندگی آزادی 23 🌍",
+        "زن زندگی آزادی 24 🌍"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "بهترین پینگ🇮🇷",
+      "outbounds": [
+        "زن زندگی آزادی 1 🇮🇷",
+        "زن زندگی آزادی 2 🇮🇷",
+        "زن زندگی آزادی 3 🇮🇷",
+        "زن زندگی آزادی 4 🇮🇷",
+        "زن زندگی آزادی 5 🇮🇷",
+        "زن زندگی آزادی 6 🇮🇷",
+        "زن زندگی آزادی 7 🇮🇷",
+        "زن زندگی آزادی 8 🇮🇷",
+        "زن زندگی آزادی 9 🇮🇷",
+        "زن زندگی آزادی 10 🇮🇷",
+        "زن زندگی آزادی 11 🇮🇷",
+        "زن زندگی آزادی 12 🇮🇷",
+        "زن زندگی آزادی 13 🇮🇷",
+        "زن زندگی آزادی 14 🇮🇷",
+        "زن زندگی آزادی 15 🇮🇷",
+        "زن زندگی آزادی 16 🇮🇷",
+        "زن زندگی آزادی 17 🇮🇷",
+        "زن زندگی آزادی 18 🇮🇷",
+        "زن زندگی آزادی 19 🇮🇷",
+        "زن زندگی آزادی 20 🇮🇷",
+        "زن زندگی آزادی 21 🇮🇷",
+        "زن زندگی آزادی 22 🇮🇷",
+        "زن زندگی آزادی 23 🇮🇷",
+        "زن زندگی آزادی 24 🇮🇷"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1200s"
+    },
+    {
+      "type": "urltest",
+      "tag": "بهترین پینگ 🌍",
+      "outbounds": [
+        "زن زندگی آزادی 1 🌍",
+        "زن زندگی آزادی 2 🌍",
+        "زن زندگی آزادی 3 🌍",
+        "زن زندگی آزادی 4 🌍",
+        "زن زندگی آزادی 5 🌍",
+        "زن زندگی آزادی 6 🌍",
+        "زن زندگی آزادی 7 🌍",
+        "زن زندگی آزادی 8 🌍",
+        "زن زندگی آزادی 9 🌍",
+        "زن زندگی آزادی 10 🌍",
+        "زن زندگی آزادی 11 🌍",
+        "زن زندگی آزادی 12 🌍",
+        "زن زندگی آزادی 13 🌍",
+        "زن زندگی آزادی 14 🌍",
+        "زن زندگی آزادی 15 🌍",
+        "زن زندگی آزادی 16 🌍",
+        "زن زندگی آزادی 17 🌍",
+        "زن زندگی آزادی 18 🌍",
+        "زن زندگی آزادی 19 🌍",
+        "زن زندگی آزادی 20 🌍",
+        "زن زندگی آزادی 21 🌍",
+        "زن زندگی آزادی 22 🌍",
+        "زن زندگی آزادی 23 🌍",
+        "زن زندگی آزادی 24 🌍"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1200s"
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "domain_resolver": "dns-direct"
+    }
+  ]
+}
