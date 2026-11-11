@@ -9418,5 +9418,633 @@
         }
       ]
     }
+  },
+  {
+    "remarks": "زن زندگی آزادی",
+    "log": {
+      "loglevel": "warning"
+    },
+    "dns": {
+      "servers": [
+        {
+          "address": "localhost",
+          "domains": [
+            "geosite:category-ir",
+            "domain:ir"
+          ],
+          "skipFallback": true,
+          "tag": "direct-dns"
+        },
+        "8.8.8.8"
+      ],
+      "tag": "dns-module",
+      "hosts": {
+        "geosite:category-ads-all": "#3",
+        "geosite:category-ads-ir": "#3"
+      }
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "sniffing": {
+          "enabled": false,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "masque",
+        "tag": "proxy",
+        "settings": {
+          "address": "162.159.198.217",
+          "port": 443,
+          "remoteDNS": [
+            "8.8.8.8"
+          ]
+        },
+        "streamSettings": {
+          "method": "masque",
+          "masqueSettings": {
+            "warp": {
+              "privateKey": "MHcCAQEEIOSbnyeby9UReVnOQcpV3hdWi5XcH3Qrh1TAva4lP1W7oAoGCCqGSM49AwEHoUQDQgAENFvJm7AT9YpSAon1Z5IT8WF5aAQOS0rU4UfSBzBuKH5JIWB2/gg1PxPGZP4Op+QEN7JQqkdnkP4fN0ISLOiSyQ==",
+              "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+              "address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8232:830e:d1d8:4d23:bc4c/128"
+              ]
+            }
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "creativecommons.org",
+            "alpn": [
+              "h2"
+            ]
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "block",
+          "domain": [
+            "geosite:category-ads-all",
+            "geosite:category-ads-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "proxy",
+          "domain": [
+            "domain:googleapis.cn",
+            "domain:gstatic.com"
+          ]
+        },
+        {
+          "type": "field",
+          "port": "443",
+          "network": "udp",
+          "outboundTag": "block"
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "geosite:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:category-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:ir"
+          ]
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "direct-dns"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "dns-module"
+          ],
+          "outboundTag": "proxy"
+        }
+      ]
+    }
+  },
+  {
+    "remarks": "زن زندگی آزادی",
+    "log": {
+      "loglevel": "warning"
+    },
+    "dns": {
+      "servers": [
+        {
+          "address": "localhost",
+          "domains": [
+            "geosite:category-ir",
+            "domain:ir"
+          ],
+          "skipFallback": true,
+          "tag": "direct-dns"
+        },
+        "8.8.8.8"
+      ],
+      "tag": "dns-module",
+      "hosts": {
+        "geosite:category-ads-all": "#3",
+        "geosite:category-ads-ir": "#3"
+      }
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "sniffing": {
+          "enabled": false,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "masque",
+        "tag": "proxy",
+        "settings": {
+          "address": "162.159.198.2",
+          "port": 8443,
+          "remoteDNS": [
+            "8.8.8.8"
+          ]
+        },
+        "streamSettings": {
+          "method": "masque",
+          "masqueSettings": {
+            "warp": {
+              "privateKey": "MHcCAQEEIOSbnyeby9UReVnOQcpV3hdWi5XcH3Qrh1TAva4lP1W7oAoGCCqGSM49AwEHoUQDQgAENFvJm7AT9YpSAon1Z5IT8WF5aAQOS0rU4UfSBzBuKH5JIWB2/gg1PxPGZP4Op+QEN7JQqkdnkP4fN0ISLOiSyQ==",
+              "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+              "address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8232:830e:d1d8:4d23:bc4c/128"
+              ]
+            }
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "cloudflare.dev",
+            "alpn": [
+              "h3"
+            ]
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "block",
+          "domain": [
+            "geosite:category-ads-all",
+            "geosite:category-ads-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "proxy",
+          "domain": [
+            "domain:googleapis.cn",
+            "domain:gstatic.com"
+          ]
+        },
+        {
+          "type": "field",
+          "port": "443",
+          "network": "udp",
+          "outboundTag": "block"
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "geosite:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:category-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:ir"
+          ]
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "direct-dns"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "dns-module"
+          ],
+          "outboundTag": "proxy"
+        }
+      ]
+    }
+  },
+  {
+    "remarks": "زن زندگی آزادی",
+    "log": {
+      "loglevel": "warning"
+    },
+    "dns": {
+      "servers": [
+        {
+          "address": "localhost",
+          "domains": [
+            "geosite:category-ir",
+            "domain:ir"
+          ],
+          "skipFallback": true,
+          "tag": "direct-dns"
+        },
+        "8.8.8.8"
+      ],
+      "tag": "dns-module",
+      "hosts": {
+        "geosite:category-ads-all": "#3",
+        "geosite:category-ads-ir": "#3"
+      }
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "sniffing": {
+          "enabled": false,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "masque",
+        "tag": "proxy",
+        "settings": {
+          "address": "2606:4700:103:3961:fede:5307:ffc5:9625",
+          "port": 8095,
+          "remoteDNS": [
+            "8.8.8.8"
+          ]
+        },
+        "streamSettings": {
+          "method": "masque",
+          "masqueSettings": {
+            "warp": {
+              "privateKey": "MHcCAQEEIOSbnyeby9UReVnOQcpV3hdWi5XcH3Qrh1TAva4lP1W7oAoGCCqGSM49AwEHoUQDQgAENFvJm7AT9YpSAon1Z5IT8WF5aAQOS0rU4UfSBzBuKH5JIWB2/gg1PxPGZP4Op+QEN7JQqkdnkP4fN0ISLOiSyQ==",
+              "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+              "address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8232:830e:d1d8:4d23:bc4c/128"
+              ]
+            }
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "amazon.com",
+            "alpn": [
+              "h2"
+            ]
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "block",
+          "domain": [
+            "geosite:category-ads-all",
+            "geosite:category-ads-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "proxy",
+          "domain": [
+            "domain:googleapis.cn",
+            "domain:gstatic.com"
+          ]
+        },
+        {
+          "type": "field",
+          "port": "443",
+          "network": "udp",
+          "outboundTag": "block"
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "geosite:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:category-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:ir"
+          ]
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "direct-dns"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "dns-module"
+          ],
+          "outboundTag": "proxy"
+        }
+      ]
+    }
+  },
+  {
+    "remarks": "زن زندگی آزادی",
+    "log": {
+      "loglevel": "warning"
+    },
+    "dns": {
+      "servers": [
+        {
+          "address": "localhost",
+          "domains": [
+            "geosite:category-ir",
+            "domain:ir"
+          ],
+          "skipFallback": true,
+          "tag": "direct-dns"
+        },
+        "8.8.8.8"
+      ],
+      "tag": "dns-module",
+      "hosts": {
+        "geosite:category-ads-all": "#3",
+        "geosite:category-ads-ir": "#3"
+      }
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "sniffing": {
+          "enabled": false,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "masque",
+        "tag": "proxy",
+        "settings": {
+          "address": "2606:4700:103::2",
+          "port": 443,
+          "remoteDNS": [
+            "8.8.8.8"
+          ]
+        },
+        "streamSettings": {
+          "method": "masque",
+          "masqueSettings": {
+            "warp": {
+              "privateKey": "MHcCAQEEIOSbnyeby9UReVnOQcpV3hdWi5XcH3Qrh1TAva4lP1W7oAoGCCqGSM49AwEHoUQDQgAENFvJm7AT9YpSAon1Z5IT8WF5aAQOS0rU4UfSBzBuKH5JIWB2/gg1PxPGZP4Op+QEN7JQqkdnkP4fN0ISLOiSyQ==",
+              "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+              "address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8232:830e:d1d8:4d23:bc4c/128"
+              ]
+            }
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "www.ox.ac.uk",
+            "alpn": [
+              "h3"
+            ]
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "block",
+          "domain": [
+            "geosite:category-ads-all",
+            "geosite:category-ads-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "proxy",
+          "domain": [
+            "domain:googleapis.cn",
+            "domain:gstatic.com"
+          ]
+        },
+        {
+          "type": "field",
+          "port": "443",
+          "network": "udp",
+          "outboundTag": "block"
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "geosite:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:category-ir"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:ir"
+          ]
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "direct-dns"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "inboundTag": [
+            "dns-module"
+          ],
+          "outboundTag": "proxy"
+        }
+      ]
+    }
   }
 ]
