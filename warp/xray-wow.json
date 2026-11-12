@@ -31143,6 +31143,281 @@
         "settings": {
           "address": [
             "172.16.0.2/32",
+            "2606:4700:110:89d8:d2a2:2a3f:5050:9d9/128"
+          ],
+          "mtu": 1280,
+          "peers": [
+            {
+              "endpoint": "8.6.112.38:500",
+              "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+              "keepAlive": 25
+            }
+          ],
+          "reserved": [
+            244,
+            60,
+            161
+          ],
+          "secretKey": "cETpU+1eMHOuM4hgWMLnCO3hSrKWEuibNSa32UcTx3k="
+        },
+        "streamSettings": {
+          "sockopt": {
+            "dialerProxy": "proxy"
+          }
+        },
+        "tag": "chain"
+      },
+      {
+        "protocol": "wireguard",
+        "settings": {
+          "address": [
+            "172.16.0.2/32",
+            "2606:4700:110:8626:7d6d:4351:bea:554d/128"
+          ],
+          "mtu": 1280,
+          "peers": [
+            {
+              "endpoint": "8.6.112.109:891",
+              "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+              "keepAlive": 25
+            }
+          ],
+          "reserved": [
+            125,
+            196,
+            54
+          ],
+          "secretKey": "SDove86BY977HQHigBqoeiv6IV845lAB2X0NU+2cO1o="
+        },
+        "streamSettings": {
+          "finalmask": {
+            "udp": [
+              {
+                "type": "noise",
+                "settings": {
+                  "reset": "2-5",
+                  "noise": [
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    },
+                    {
+                      "rand": "2-5",
+                      "randRange": "0-255",
+                      "delay": "5-10"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "dns",
+        "settings": {
+          "rules": [
+            {
+              "action": "hijack"
+            }
+          ]
+        },
+        "tag": "dns-out"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "inboundTag": [
+            "mixed-in"
+          ],
+          "port": 53,
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns-in"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "remote-dns"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "geosite:private"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "geosite:category-ads-all",
+            "geosite:category-ads-ir"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "geosite:category-ir"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "geoip:ir"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "network": "tcp,udp",
+          "outboundTag": "chain",
+          "type": "field"
+        }
+      ]
+    },
+    "policy": {
+      "levels": {
+        "0": {
+          "connIdle": 300,
+          "handshake": 4,
+          "uplinkOnly": 1,
+          "downlinkOnly": 1
+        }
+      },
+      "system": {
+        "statsOutboundUplink": true,
+        "statsOutboundDownlink": true
+      }
+    },
+    "stats": {}
+  },
+  {
+    "remarks": "زن زندگی آزادی 115",
+    "version": {
+      "min": "26.2.6"
+    },
+    "log": {
+      "loglevel": "none"
+    },
+    "dns": {
+      "hosts": {
+        "geosite:category-ads-all": "#3",
+        "geosite:category-ads-ir": "#3"
+      },
+      "servers": [
+        {
+          "address": "8.8.8.8",
+          "tag": "remote-dns"
+        },
+        {
+          "address": "8.8.8.8",
+          "domains": [
+            "geosite:category-ir"
+          ],
+          "expectIPs": [
+            "geoip:ir"
+          ],
+          "skipFallback": true
+        }
+      ],
+      "queryStrategy": "UseIPv4",
+      "tag": "dns"
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "enabled": true,
+          "routeOnly": true
+        },
+        "tag": "mixed-in"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10853,
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "8.8.8.8",
+          "network": "tcp,udp",
+          "port": 53
+        },
+        "tag": "dns-in"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "wireguard",
+        "settings": {
+          "address": [
+            "172.16.0.2/32",
             "2606:4700:110:8b3e:63a9:401b:cf47:dcb9/128"
           ],
           "mtu": 1280,
@@ -31350,7 +31625,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 115",
+    "remarks": "زن زندگی آزادی 116",
     "version": {
       "min": "26.2.6"
     },
@@ -31625,7 +31900,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 116",
+    "remarks": "زن زندگی آزادی 117",
     "version": {
       "min": "26.2.6"
     },
@@ -31900,7 +32175,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 117",
+    "remarks": "زن زندگی آزادی 118",
     "version": {
       "min": "26.2.6"
     },
@@ -32175,7 +32450,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 118",
+    "remarks": "زن زندگی آزادی 119",
     "version": {
       "min": "26.2.6"
     },
@@ -32450,7 +32725,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 119",
+    "remarks": "زن زندگی آزادی 120",
     "version": {
       "min": "26.2.6"
     },
@@ -32725,7 +33000,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 120",
+    "remarks": "زن زندگی آزادی 121",
     "version": {
       "min": "26.2.6"
     },
@@ -33000,7 +33275,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 121",
+    "remarks": "زن زندگی آزادی 122",
     "version": {
       "min": "26.2.6"
     },
@@ -33275,7 +33550,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 122",
+    "remarks": "زن زندگی آزادی 123",
     "version": {
       "min": "26.2.6"
     },
@@ -33550,7 +33825,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 123",
+    "remarks": "زن زندگی آزادی 124",
     "version": {
       "min": "26.2.6"
     },
@@ -33825,7 +34100,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 124",
+    "remarks": "زن زندگی آزادی 125",
     "version": {
       "min": "26.2.6"
     },
@@ -34100,7 +34375,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 125",
+    "remarks": "زن زندگی آزادی 126",
     "version": {
       "min": "26.2.6"
     },
@@ -34375,7 +34650,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 126",
+    "remarks": "زن زندگی آزادی 127",
     "version": {
       "min": "26.2.6"
     },
@@ -34650,7 +34925,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 127",
+    "remarks": "زن زندگی آزادی 128",
     "version": {
       "min": "26.2.6"
     },
@@ -34925,7 +35200,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 128",
+    "remarks": "زن زندگی آزادی 129",
     "version": {
       "min": "26.2.6"
     },
@@ -35200,7 +35475,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 129",
+    "remarks": "زن زندگی آزادی 130",
     "version": {
       "min": "26.2.6"
     },
@@ -35475,7 +35750,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 130",
+    "remarks": "زن زندگی آزادی 131",
     "version": {
       "min": "26.2.6"
     },
@@ -35750,7 +36025,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 131",
+    "remarks": "زن زندگی آزادی 132",
     "version": {
       "min": "26.2.6"
     },
@@ -36025,7 +36300,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 132",
+    "remarks": "زن زندگی آزادی 133",
     "version": {
       "min": "26.2.6"
     },
@@ -36300,7 +36575,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 133",
+    "remarks": "زن زندگی آزادی 134",
     "version": {
       "min": "26.2.6"
     },
@@ -36575,7 +36850,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 134",
+    "remarks": "زن زندگی آزادی 135",
     "version": {
       "min": "26.2.6"
     },
@@ -36850,7 +37125,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 135",
+    "remarks": "زن زندگی آزادی 136",
     "version": {
       "min": "26.2.6"
     },
@@ -37125,7 +37400,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 136",
+    "remarks": "زن زندگی آزادی 137",
     "version": {
       "min": "26.2.6"
     },
@@ -37400,7 +37675,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 137",
+    "remarks": "زن زندگی آزادی 138",
     "version": {
       "min": "26.2.6"
     },
@@ -37675,7 +37950,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 138",
+    "remarks": "زن زندگی آزادی 139",
     "version": {
       "min": "26.2.6"
     },
@@ -37950,7 +38225,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 139",
+    "remarks": "زن زندگی آزادی 140",
     "version": {
       "min": "26.2.6"
     },
@@ -38225,7 +38500,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 140",
+    "remarks": "زن زندگی آزادی 141",
     "version": {
       "min": "26.2.6"
     },
@@ -38500,7 +38775,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 141",
+    "remarks": "زن زندگی آزادی 142",
     "version": {
       "min": "26.2.6"
     },
@@ -38775,7 +39050,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 142",
+    "remarks": "زن زندگی آزادی 143",
     "version": {
       "min": "26.2.6"
     },
@@ -39050,7 +39325,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 143",
+    "remarks": "زن زندگی آزادی 144",
     "version": {
       "min": "26.2.6"
     },
@@ -39325,7 +39600,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 144",
+    "remarks": "زن زندگی آزادی 145",
     "version": {
       "min": "26.2.6"
     },
@@ -39600,7 +39875,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 145",
+    "remarks": "زن زندگی آزادی 146",
     "version": {
       "min": "26.2.6"
     },
@@ -39875,7 +40150,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 146",
+    "remarks": "زن زندگی آزادی 147",
     "version": {
       "min": "26.2.6"
     },
@@ -40150,7 +40425,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 147",
+    "remarks": "زن زندگی آزادی 148",
     "version": {
       "min": "26.2.6"
     },
@@ -40425,7 +40700,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 148",
+    "remarks": "زن زندگی آزادی 149",
     "version": {
       "min": "26.2.6"
     },
@@ -40700,7 +40975,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 149",
+    "remarks": "زن زندگی آزادی 150",
     "version": {
       "min": "26.2.6"
     },
@@ -40975,7 +41250,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 150",
+    "remarks": "زن زندگی آزادی 151",
     "version": {
       "min": "26.2.6"
     },
@@ -41250,7 +41525,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 151",
+    "remarks": "زن زندگی آزادی 152",
     "version": {
       "min": "26.2.6"
     },
@@ -41525,7 +41800,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 152",
+    "remarks": "زن زندگی آزادی 153",
     "version": {
       "min": "26.2.6"
     },
@@ -41800,7 +42075,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 153",
+    "remarks": "زن زندگی آزادی 154",
     "version": {
       "min": "26.2.6"
     },
@@ -42075,7 +42350,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 154",
+    "remarks": "زن زندگی آزادی 155",
     "version": {
       "min": "26.2.6"
     },
@@ -42350,7 +42625,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 155",
+    "remarks": "زن زندگی آزادی 156",
     "version": {
       "min": "26.2.6"
     },
@@ -42625,7 +42900,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 156",
+    "remarks": "زن زندگی آزادی 157",
     "version": {
       "min": "26.2.6"
     },
@@ -42900,7 +43175,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 157",
+    "remarks": "زن زندگی آزادی 158",
     "version": {
       "min": "26.2.6"
     },
@@ -43175,7 +43450,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 158",
+    "remarks": "زن زندگی آزادی 159",
     "version": {
       "min": "26.2.6"
     },
@@ -43450,7 +43725,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 159",
+    "remarks": "زن زندگی آزادی 160",
     "version": {
       "min": "26.2.6"
     },
@@ -43725,7 +44000,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 160",
+    "remarks": "زن زندگی آزادی 161",
     "version": {
       "min": "26.2.6"
     },
@@ -44000,7 +44275,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 161",
+    "remarks": "زن زندگی آزادی 162",
     "version": {
       "min": "26.2.6"
     },
@@ -44275,7 +44550,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 162",
+    "remarks": "زن زندگی آزادی 163",
     "version": {
       "min": "26.2.6"
     },
@@ -44550,7 +44825,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 163",
+    "remarks": "زن زندگی آزادی 164",
     "version": {
       "min": "26.2.6"
     },
@@ -44825,7 +45100,7 @@
     "stats": {}
   },
   {
-    "remarks": "زن زندگی آزادی 164",
+    "remarks": "زن زندگی آزادی 165",
     "version": {
       "min": "26.2.6"
     },
