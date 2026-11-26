@@ -59,11 +59,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "129.146.77.248",
-            "port": 39495,
+            "address": "67.220.85.46",
+            "port": 18000,
             "users": [
               {
-                "id": "f836c736-87fc-4fde-aabc-00857ecdff3e",
+                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
                 "alterId": 0,
                 "security": "auto",
                 "level": 8
@@ -73,14 +73,8 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/cctv13.m3u8",
-          "headers": {
-            "Host": "129.146.77.248"
-          }
-        }
+        "network": "tcp",
+        "security": "none"
       },
       "tag": "proxy-1"
     },
@@ -89,10 +83,10 @@
       "settings": {
         "servers": [
           {
-            "address": "216.105.168.116",
-            "port": 19127,
-            "method": "aes-128-gcm",
-            "password": "1dc24320614fa89698a03ee84bec0f69",
+            "address": "198.98.53.130",
+            "port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "eDfN7SODQceIOmIAbtJJtK",
             "level": 8
           }
         ]
@@ -107,10 +101,10 @@
       "settings": {
         "servers": [
           {
-            "address": "216.105.168.117",
-            "port": 19128,
-            "method": "aes-128-gcm",
-            "password": "41ef8a2756d6740d776055212ee20714",
+            "address": "40.160.86.43",
+            "port": 8388,
+            "method": "aes-256-gcm",
+            "password": "itzvpn@321",
             "level": 8
           }
         ]
@@ -125,10 +119,10 @@
       "settings": {
         "servers": [
           {
-            "address": "156.146.38.169",
-            "port": 443,
-            "method": "aes-128-gcm",
-            "password": "shadowsocks",
+            "address": "38.91.100.39",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
             "level": 8
           }
         ]
@@ -139,313 +133,85 @@
       "tag": "proxy-4"
     },
     {
-      "protocol": "vless",
+      "protocol": "shadowsocks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "166.0.25.92",
-            "port": 443,
-            "users": [
-              {
-                "id": "ea240abb-cbff-4250-a7e2-81fead273be4",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
+            "address": "135.148.42.13",
+            "port": 8388,
+            "method": "aes-256-gcm",
+            "password": "itzvpn@321",
+            "level": 8
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.amazon.com",
-          "publicKey": "sM_GJx22-fLTXSSyhHKWZGwUUlRajZLXgg7JXo8l0gs",
-          "shortId": "f616956add605348",
-          "fingerprint": "chrome"
-        }
+        "network": "tcp"
       },
       "tag": "proxy-5"
     },
     {
-      "protocol": "shadowsocks",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "173.244.56.9",
-            "port": 443,
-            "method": "aes-128-gcm",
-            "password": "shadowsocks",
-            "level": 8
+            "address": "38.91.100.69",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
       },
       "tag": "proxy-6"
     },
     {
-      "protocol": "trojan",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "167.88.61.175",
+            "address": "169.40.42.35",
             "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "blog.browseseniorrolesandenhanceyourcareertoday.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yahoo.com",
+          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "shortId": "c39cc7310a",
+          "fingerprint": "ios"
         }
       },
       "tag": "proxy-7"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "167.88.61.20",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.browseseniorrolesandenhanceyourcareertoday.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-8"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "167.88.61.52",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "courses.browseseniorrolesandenhanceyourcareertoday.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-9"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "167.88.61.198",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cdn.browseseniorrolesandenhanceyourcareertoday.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-10"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "179.254.94.184",
-            "port": 443,
-            "users": [
-              {
-                "id": "2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.bing.com",
-          "publicKey": "q49v36UVMNsNION3nn-cQU6_8VwgM_psm1s5z7XVaWc",
-          "shortId": "e6052385636f0700",
-          "fingerprint": "chrome"
-        }
-      },
-      "tag": "proxy-11"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "167.88.61.193",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "browseseniorrolesandenhanceyourcareertoday.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-12"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.40.57.133",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-13"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "15.204.97.195",
-            "port": 23576,
-            "users": [
-              {
-                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "fuck.rkn",
-          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "shortId": "01",
-          "fingerprint": "chrome"
-        }
-      },
-      "tag": "proxy-14"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.40.57.138",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-15"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "15.204.97.198",
-            "port": 23576,
-            "users": [
-              {
-                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "fuck.rkn",
-          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "shortId": "01",
-          "fingerprint": "firefox"
-        }
-      },
-      "tag": "proxy-16"
     },
     {
       "protocol": "vless",
@@ -483,78 +249,18 @@
           ]
         }
       },
-      "tag": "proxy-17"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.40.57.135",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-18"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "84.17.41.2",
-            "port": 18000,
-            "users": [
-              {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-19"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.40.57.134",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-20"
+      "tag": "proxy-8"
     },
     {
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "205.186.112.19",
+            "address": "169.40.42.231",
             "port": 443,
             "users": [
               {
-                "id": "f1a04d4c-56b3-4f93-a4ec-91a5039a48bd",
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
                 "flow": "xtls-rprx-vision",
                 "encryption": "none",
                 "level": 8
@@ -567,49 +273,13 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.amazon.com",
-          "publicKey": "cwao9PnlNhUTd19WxIKAOdAjkaqVJihY0d2WOR8I2WY",
-          "shortId": "cce23a6bce3bc925",
+          "serverName": "yahoo.com",
+          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "shortId": "c39cc7310a",
           "fingerprint": ""
         }
       },
-      "tag": "proxy-21"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "216.106.178.169",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-22"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "67.220.73.178",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-23"
+      "tag": "proxy-9"
     },
     {
       "protocol": "shadowsocks",
@@ -627,7 +297,7 @@
       "streamSettings": {
         "network": "tcp"
       },
-      "tag": "proxy-24"
+      "tag": "proxy-10"
     },
     {
       "protocol": "shadowsocks",
@@ -645,17 +315,17 @@
       "streamSettings": {
         "network": "tcp"
       },
-      "tag": "proxy-25"
+      "tag": "proxy-11"
     },
     {
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
-            "address": "135.148.42.13",
-            "port": 8388,
+            "address": "15.204.246.107",
+            "port": 8888,
             "method": "aes-256-gcm",
-            "password": "itzvpn@321",
+            "password": "Y6R9pAtvxxzmGC",
             "level": 8
           }
         ]
@@ -663,109 +333,7 @@
       "streamSettings": {
         "network": "tcp"
       },
-      "tag": "proxy-26"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "38.91.100.39",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-27"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "67.220.85.46",
-            "port": 18000,
-            "users": [
-              {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-28"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "40.160.86.43",
-            "port": 8388,
-            "method": "aes-256-gcm",
-            "password": "itzvpn@321",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-29"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "134.195.196.211",
-            "port": 18000,
-            "users": [
-              {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-30"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "198.98.53.130",
-            "port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "eDfN7SODQceIOmIAbtJJtK",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-31"
+      "tag": "proxy-12"
     },
     {
       "protocol": "vmess",
@@ -789,17 +357,17 @@
         "network": "tcp",
         "security": "none"
       },
-      "tag": "proxy-32"
+      "tag": "proxy-13"
     },
     {
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
-            "address": "15.204.246.107",
-            "port": 8888,
+            "address": "149.40.57.138",
+            "port": 19999,
             "method": "aes-256-gcm",
-            "password": "Y6R9pAtvxxzmGC",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
             "level": 8
           }
         ]
@@ -807,217 +375,7 @@
       "streamSettings": {
         "network": "tcp"
       },
-      "tag": "proxy-33"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "67.220.95.3",
-            "port": 18000,
-            "users": [
-              {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-34"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "38.128.66.212",
-            "port": 1270,
-            "users": [
-              {
-                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "xmfhlpy.com",
-          "allowInsecure": false,
-          "fingerprint": null,
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-35"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "38.64.138.187",
-            "port": 1270,
-            "users": [
-              {
-                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "xmfhlpy.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-36"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "38.128.66.241",
-            "port": 1270,
-            "users": [
-              {
-                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "xmfhlpy.com",
-          "allowInsecure": false,
-          "fingerprint": null,
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-37"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "162.251.61.46",
-            "port": 1270,
-            "users": [
-              {
-                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "xmfhlpy.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-38"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "216.152.155.176",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "blog.nextjobopportunityandclaimyouridealrole.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-39"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "216.152.155.131",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.nextjobopportunityandclaimyouridealrole.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-40"
+      "tag": "proxy-14"
     },
     {
       "protocol": "vmess",
@@ -1050,14 +408,62 @@
           ]
         }
       },
-      "tag": "proxy-41"
+      "tag": "proxy-15"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "169.40.42.74",
+            "port": 443,
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yahoo.com",
+          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "shortId": "c39cc7310a",
+          "fingerprint": "chrome"
+        }
+      },
+      "tag": "proxy-16"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "149.40.57.135",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-17"
     },
     {
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "216.152.156.65",
+            "address": "66.163.122.113",
             "port": 443,
             "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
             "level": 8
@@ -1068,7 +474,7 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
+          "serverName": "api.searchnationwidecareerchangehelperandguidancetoday.com",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
@@ -1077,14 +483,209 @@
           ]
         }
       },
-      "tag": "proxy-42"
+      "tag": "proxy-18"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "149.40.57.134",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-19"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "66.163.122.30",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "resources.searchnationwidecareerchangehelperandguidancetoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-20"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "67.220.73.178",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-21"
     },
     {
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "38.91.100.69",
+            "address": "23.162.200.198",
+            "port": 18000,
+            "users": [
+              {
+                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
+      },
+      "tag": "proxy-22"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "134.195.196.211",
+            "port": 18000,
+            "users": [
+              {
+                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
+      },
+      "tag": "proxy-23"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "149.40.57.133",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-24"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.106.178.169",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-25"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "169.40.42.89",
+            "port": 443,
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yahoo.com",
+          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "shortId": "c39cc7310a",
+          "fingerprint": "chrome"
+        }
+      },
+      "tag": "proxy-26"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "156.146.38.169",
+            "port": 443,
+            "method": "aes-128-gcm",
+            "password": "shadowsocks",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-27"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.64.138.187",
             "port": 1270,
             "users": [
               {
@@ -1110,7 +711,100 @@
           ]
         }
       },
-      "tag": "proxy-43"
+      "tag": "proxy-28"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.128.66.249",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-29"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "162.251.61.46",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-30"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.155.176",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "blog.nextjobopportunityandclaimyouridealrole.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-31"
     },
     {
       "protocol": "vmess",
@@ -1143,20 +837,101 @@
           ]
         }
       },
-      "tag": "proxy-44"
+      "tag": "proxy-32"
     },
     {
-      "protocol": "vless",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.155.50",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.nextjobopportunityandclaimyouridealrole.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-33"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.155.158",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "resources.nextjobopportunityandclaimyouridealrole.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-34"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.147.74",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.connectingpeoplewithgreatjobs.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-35"
+    },
+    {
+      "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "kuruish.org",
-            "port": 443,
+            "address": "38.128.66.212",
+            "port": 1270,
             "users": [
               {
-                "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-                "flow": "",
-                "encryption": "none",
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
                 "level": 8
               }
             ]
@@ -1167,7 +942,34 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "kuruish.org",
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": null,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-36"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.147.48",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "courses.connectingpeoplewithgreatjobs.com",
           "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
@@ -1176,7 +978,121 @@
           ]
         }
       },
-      "tag": "proxy-45"
+      "tag": "proxy-37"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.128.66.241",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": null,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-38"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.155.23",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "courses.nextjobopportunityandclaimyouridealrole.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-39"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.147.85",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.connectingpeoplewithgreatjobs.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-40"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.147.89",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.connectingpeoplewithgreatjobs.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-41"
     },
     {
       "protocol": "vless",
@@ -1203,7 +1119,106 @@
           "serverName": "yahoo.com",
           "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
           "shortId": "c39cc7310a",
-          "fingerprint": "random"
+          "fingerprint": "chrome"
+        }
+      },
+      "tag": "proxy-42"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.155.131",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.nextjobopportunityandclaimyouridealrole.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-43"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "173.244.56.9",
+            "port": 443,
+            "method": "aes-128-gcm",
+            "password": "shadowsocks",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-44"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "170.101.101.211",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.explorecreativejobsandenhanceyourcareerportfolio.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-45"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.156.81",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
+          "allowInsecure": false,
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy-46"
@@ -1213,12 +1228,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "169.40.42.202",
+            "address": "66.163.113.9",
             "port": 443,
             "users": [
               {
-                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
-                "flow": "xtls-rprx-vision",
+                "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+                "flow": "",
                 "encryption": "none",
                 "level": 8
               }
@@ -1228,56 +1243,29 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "yahoo.com",
-          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "shortId": "c39cc7310a",
-          "fingerprint": "random"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "kuruish.org",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy-47"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "169.40.42.89",
-            "port": 443,
-            "users": [
-              {
-                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "yahoo.com",
-          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "shortId": "c39cc7310a",
-          "fingerprint": "chrome"
-        }
-      },
-      "tag": "proxy-48"
     },
     {
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "38.22.17.251",
-            "port": 1270,
+            "address": "84.17.41.2",
+            "port": 18000,
             "users": [
               {
-                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
                 "alterId": 0,
                 "security": "auto",
                 "level": 8
@@ -1288,72 +1276,9 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "xmfhlpy.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
+        "security": "none"
       },
-      "tag": "proxy-49"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "66.163.122.113",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.searchnationwidecareerchangehelperandguidancetoday.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-50"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "66.163.122.25",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cdn.searchnationwidecareerchangehelperandguidancetoday.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-51"
+      "tag": "proxy-48"
     },
     {
       "protocol": "trojan",
@@ -1372,6 +1297,90 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-49"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "129.146.77.248",
+            "port": 39495,
+            "users": [
+              {
+                "id": "f836c736-87fc-4fde-aabc-00857ecdff3e",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/cctv13.m3u8",
+          "headers": {
+            "Host": "129.146.77.248"
+          }
+        }
+      },
+      "tag": "proxy-50"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.156.159",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "resources.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-51"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.156.65",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
@@ -1416,33 +1425,6 @@
       "tag": "proxy-53"
     },
     {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "216.152.156.212",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-54"
-    },
-    {
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -1473,7 +1455,67 @@
           ]
         }
       },
+      "tag": "proxy-54"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.22.17.251",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
       "tag": "proxy-55"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "167.88.61.52",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "courses.browseseniorrolesandenhanceyourcareertoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-56"
     },
     {
       "protocol": "vmess",
@@ -1506,7 +1548,67 @@
           ]
         }
       },
-      "tag": "proxy-56"
+      "tag": "proxy-57"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "167.88.61.175",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "blog.browseseniorrolesandenhanceyourcareertoday.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-58"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "162.251.62.44",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-59"
     },
     {
       "protocol": "vmess",
@@ -1539,56 +1641,14 @@
           ]
         }
       },
-      "tag": "proxy-57"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "169.197.142.22",
-            "port": 18000,
-            "users": [
-              {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-58"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "8.216.18.189",
-            "port": 5555,
-            "method": "aes-256-gcm",
-            "password": "123456",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-59"
+      "tag": "proxy-60"
     },
     {
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "66.163.122.26",
+            "address": "167.88.61.20",
             "port": 443,
             "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
             "level": 8
@@ -1599,43 +1659,13 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "blog.searchnationwidecareerchangehelperandguidancetoday.com",
+          "serverName": "api.browseseniorrolesandenhanceyourcareertoday.com",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
             "h2",
             "http/1.1"
           ]
-        }
-      },
-      "tag": "proxy-60"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "169.40.42.74",
-            "port": 443,
-            "users": [
-              {
-                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "yahoo.com",
-          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "shortId": "c39cc7310a",
-          "fingerprint": "ios"
         }
       },
       "tag": "proxy-61"
@@ -1645,31 +1675,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "38.91.107.49",
-            "port": 18000,
-            "users": [
-              {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-62"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "162.251.62.35",
+            "address": "67.220.74.188",
             "port": 1270,
             "users": [
               {
@@ -1695,14 +1701,14 @@
           ]
         }
       },
-      "tag": "proxy-63"
+      "tag": "proxy-62"
     },
     {
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "216.152.155.158",
+            "address": "167.88.61.193",
             "port": 443,
             "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
             "level": 8
@@ -1713,7 +1719,7 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "resources.nextjobopportunityandclaimyouridealrole.com",
+          "serverName": "browseseniorrolesandenhanceyourcareertoday.com",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
@@ -1721,6 +1727,24 @@
             "http/1.1"
           ]
         }
+      },
+      "tag": "proxy-63"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "57.129.83.85",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
       },
       "tag": "proxy-64"
     },
@@ -1758,11 +1782,38 @@
       "tag": "proxy-65"
     },
     {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "167.88.61.198",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.browseseniorrolesandenhanceyourcareertoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-66"
+    },
+    {
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "38.110.1.246",
+            "address": "38.91.107.49",
             "port": 18000,
             "users": [
               {
@@ -1779,33 +1830,6 @@
         "network": "tcp",
         "security": "none"
       },
-      "tag": "proxy-66"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "216.152.156.81",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
-          "allowInsecure": false,
-          "fingerprint": "firefox",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
       "tag": "proxy-67"
     },
     {
@@ -1813,7 +1837,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "162.251.62.44",
+            "address": "162.251.62.35",
             "port": 1270,
             "users": [
               {
@@ -1842,44 +1866,11 @@
       "tag": "proxy-68"
     },
     {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "67.220.74.188",
-            "port": 1270,
-            "users": [
-              {
-                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "xmfhlpy.com",
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-69"
-    },
-    {
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "216.152.155.59",
+            "address": "66.163.122.7",
             "port": 443,
             "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
             "level": 8
@@ -1890,7 +1881,7 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "api.nextjobopportunityandclaimyouridealrole.com",
+          "serverName": "www.searchnationwidecareerchangehelperandguidancetoday.com",
           "allowInsecure": false,
           "fingerprint": "",
           "alpn": [
@@ -1899,163 +1890,7 @@
           ]
         }
       },
-      "tag": "proxy-70"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "141.98.101.178",
-            "port": 443,
-            "method": "aes-128-gcm",
-            "password": "shadowsocks",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-71"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "82.38.31.200",
-            "port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "k1dBOmOB4oqi7Ump37a1bQ",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-72"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "172.99.189.142",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-73"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "168.110.63.247",
-            "port": 8081,
-            "users": [
-              {
-                "id": "c3bde296-8e44-4b8c-a325-577d5b3cc7c8",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/vless",
-          "headers": {
-            "Host": ""
-          }
-        }
-      },
-      "tag": "proxy-74"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "23.162.152.245",
-            "port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ySGkGhr2sKHV",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-75"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "57.129.83.85",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-76"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "167.17.64.27",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-77"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "202.50.253.27",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-78"
+      "tag": "proxy-69"
     },
     {
       "protocol": "shadowsocks",
@@ -2073,7 +1908,199 @@
       "streamSettings": {
         "network": "tcp"
       },
-      "tag": "proxy-79"
+      "tag": "proxy-70"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "15.204.97.195",
+            "port": 23576,
+            "users": [
+              {
+                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fuck.rkn",
+          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "shortId": "01",
+          "fingerprint": "chrome"
+        }
+      },
+      "tag": "proxy-71"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "172.99.189.142",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-72"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "170.101.101.19",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "learn.explorecreativejobsandenhanceyourcareerportfolio.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-73"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "167.17.64.27",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-74"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "15.204.97.198",
+            "port": 23576,
+            "users": [
+              {
+                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fuck.rkn",
+          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "shortId": "01",
+          "fingerprint": "firefox"
+        }
+      },
+      "tag": "proxy-75"
+    },
+    {
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "82.38.31.200",
+            "port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "k1dBOmOB4oqi7Ump37a1bQ",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "proxy-76"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.110.1.246",
+            "port": 18000,
+            "users": [
+              {
+                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
+      },
+      "tag": "proxy-77"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "216.152.156.212",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-78"
     },
     {
       "protocol": "shadowsocks",
@@ -2091,6 +2118,33 @@
       "streamSettings": {
         "network": "tcp"
       },
+      "tag": "proxy-79"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "66.163.122.26",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "blog.searchnationwidecareerchangehelperandguidancetoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
       "tag": "proxy-80"
     },
     {
@@ -2098,10 +2152,10 @@
       "settings": {
         "servers": [
           {
-            "address": "54.37.235.208",
-            "port": 11169,
-            "method": "aes-128-gcm",
-            "password": "122e6f90890e2691f3da63eddf951495",
+            "address": "202.50.253.27",
+            "port": 19999,
+            "method": "aes-256-gcm",
+            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
             "level": 8
           }
         ]
@@ -2110,30 +2164,6 @@
         "network": "tcp"
       },
       "tag": "proxy-81"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "129.154.61.196",
-            "port": 800,
-            "users": [
-              {
-                "id": "a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0",
-                "alterId": 0,
-                "security": "auto",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none"
-      },
-      "tag": "proxy-82"
     },
     {
       "protocol": "vless",
@@ -2163,34 +2193,7 @@
           "fingerprint": "chrome"
         }
       },
-      "tag": "proxy-83"
-    },
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "66.163.122.30",
-            "port": 443,
-            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "resources.searchnationwidecareerchangehelperandguidancetoday.com",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-84"
+      "tag": "proxy-82"
     },
     {
       "protocol": "vless",
@@ -2220,92 +2223,14 @@
           "fingerprint": "chrome"
         }
       },
-      "tag": "proxy-85"
+      "tag": "proxy-83"
     },
     {
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "51.158.206.86",
-            "port": 23576,
-            "users": [
-              {
-                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "fuck.rkn",
-          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "shortId": "01",
-          "fingerprint": "chrome"
-        }
-      },
-      "tag": "proxy-86"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "108.181.121.170",
-            "port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "qItG8SueYQcP",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-87"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "51.158.206.34",
-            "port": 23576,
-            "users": [
-              {
-                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "fuck.rkn",
-          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "shortId": "01",
-          "fingerprint": ""
-        }
-      },
-      "tag": "proxy-88"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "51.158.206.80",
+            "address": "51.158.206.29",
             "port": 23576,
             "users": [
               {
@@ -2328,7 +2253,7 @@
           "fingerprint": "firefox"
         }
       },
-      "tag": "proxy-89"
+      "tag": "proxy-84"
     },
     {
       "protocol": "vless",
@@ -2358,20 +2283,20 @@
           "fingerprint": "firefox"
         }
       },
-      "tag": "proxy-90"
+      "tag": "proxy-85"
     },
     {
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "23.162.200.198",
-            "port": 18000,
+            "address": "51.158.206.25",
+            "port": 23576,
             "users": [
               {
-                "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-                "alterId": 0,
-                "security": "auto",
+                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
                 "level": 8
               }
             ]
@@ -2380,16 +2305,22 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "none"
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fuck.rkn",
+          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "shortId": "",
+          "fingerprint": "random"
+        }
       },
-      "tag": "proxy-91"
+      "tag": "proxy-86"
     },
     {
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "51.158.206.98",
+            "address": "51.158.206.93",
             "port": 23576,
             "users": [
               {
@@ -2409,10 +2340,10 @@
           "serverName": "fuck.rkn",
           "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
           "shortId": "01",
-          "fingerprint": "chrome"
+          "fingerprint": ""
         }
       },
-      "tag": "proxy-92"
+      "tag": "proxy-87"
     },
     {
       "protocol": "vless",
@@ -2438,11 +2369,11 @@
         "realitySettings": {
           "serverName": "fuck.rkn",
           "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "shortId": "",
+          "shortId": "01",
           "fingerprint": "chrome"
         }
       },
-      "tag": "proxy-93"
+      "tag": "proxy-88"
     },
     {
       "protocol": "vless",
@@ -2471,6 +2402,150 @@
           "shortId": "01",
           "fingerprint": ""
         }
+      },
+      "tag": "proxy-89"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "66.163.122.25",
+            "port": 443,
+            "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.searchnationwidecareerchangehelperandguidancetoday.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-90"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.158.206.86",
+            "port": 23576,
+            "users": [
+              {
+                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fuck.rkn",
+          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "shortId": "01",
+          "fingerprint": "chrome"
+        }
+      },
+      "tag": "proxy-91"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "46.105.222.156",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-92"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.158.206.8",
+            "port": 23576,
+            "users": [
+              {
+                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fuck.rkn",
+          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "shortId": "01",
+          "fingerprint": "firefox"
+        }
+      },
+      "tag": "proxy-93"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "82.22.2.137",
+            "port": 443,
+            "users": [
+              {
+                "id": "7ce93cef-119d-4cba-9d9d-da0056ba979c",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
       },
       "tag": "proxy-94"
     },
@@ -2505,93 +2580,6 @@
       "tag": "proxy-95"
     },
     {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.88.107.74",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-96"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.88.106.73",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-97"
-    },
-    {
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "15.235.182.183",
-            "port": 19999,
-            "method": "aes-256-gcm",
-            "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-            "level": 8
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "tag": "proxy-98"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "66.163.113.9",
-            "port": 443,
-            "users": [
-              {
-                "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "kuruish.org",
-          "allowInsecure": false,
-          "fingerprint": "",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        }
-      },
-      "tag": "proxy-99"
-    },
-    {
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2617,6 +2605,135 @@
           "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
           "shortId": "01",
           "fingerprint": "firefox"
+        }
+      },
+      "tag": "proxy-96"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.158.206.80",
+            "port": 23576,
+            "users": [
+              {
+                "id": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fuck.rkn",
+          "publicKey": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "shortId": "01",
+          "fingerprint": "firefox"
+        }
+      },
+      "tag": "proxy-97"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "46.105.222.155",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-98"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "193.108.117.61",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-99"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "91.134.35.72",
+            "port": 1270,
+            "users": [
+              {
+                "id": "5c040f1d-45db-43bd-8d46-e4950e433735",
+                "alterId": 0,
+                "security": "auto",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "xmfhlpy.com",
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy-100"
